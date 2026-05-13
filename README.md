@@ -1,71 +1,39 @@
-# research-template
+# AI Impact on M&A Seminar Paper
 
-An [APM](https://microsoft.github.io/apm/) project targeting [Claude Code](https://claude.com/claude-code), pre-wired with research agents, the Anthropic PDF skill, and the `parallel-search` and `deepwiki` MCP servers.
+Workspace für die wissenschaftliche Seminararbeit zum Einfluss von KI auf M&A.
 
-## Quick start
+Der Ordner trennt bewusst zwischen Rohmaterial, Wiki-Wissen, Synthese, Argumentation und Schreibfassung. Inhaltliche Entscheidungen wie Forschungsfrage, These und finale Gliederung werden nicht in dieser README festgelegt.
 
-```bash
-git clone <repo-url> research-template
-cd research-template
-apm install
-```
+## Arbeitslogik
 
-That's it — `apm install` reads [`apm.yml`](./apm.yml) and pulls in every agent, skill, and MCP server the project needs.
+1. Quellen in `research/input/` ablegen.
+2. Relevante Quellen ins Wiki aufnehmen und dort verknüpfen.
+3. Quervergleiche in `research/synthesis/` sammeln.
+4. Argumentationsstruktur in `research/argument/` entwickeln.
+5. Schreibfassung und formale Nachweise in `paper/` führen.
+6. Präsentationsmaterial später in `presentation/` vorbereiten.
 
-## Prerequisites
+## Ordner
 
-You need three tools on your machine:
+| Pfad | Zweck |
+| --- | --- |
+| `research/input/` | Rohmaterial: Papers, Seminarunterlagen, Web-Funde und Inbox |
+| `research/wiki/` | LLM-Wiki mit Quellen-, Konzept- und Entitätsseiten |
+| `research/synthesis/` | Vergleichstabellen, Quellenbewertung, offene Forschungsfragen |
+| `research/argument/` | Argument Maps und logische Struktur der Arbeit |
+| `paper/` | Outline, Drafts, KI-Verzeichnis und spätere Abgabefassung |
+| `presentation/` | Material für die Seminarpräsentation |
+| `.agents/`, `.claude/`, `.codex/` | Agenten, Skills und lokale Tool-Konfiguration |
 
-| Tool | What for |
-|------|----------|
-| **Git** | Cloning the repo and the dependencies APM pulls in |
-| **uv** | Fast Python package & environment manager |
-| **APM** | Microsoft's Agent Package Manager — runs the install from `apm.yml` |
+## Wichtige Arbeitsdateien
 
-Don't have them yet? Follow the per-OS setup guide:
+- `READING-LIST.md` — kuratierte Leseliste und Lesestatus
+- `research/synthesis/evidence-matrix.md` — neutrale Matrix für Quellen, Methoden, Evidenz und Schwächen
+- `research/synthesis/source-evaluation.md` — Qualitätsprüfung der Literaturbasis
+- `research/argument/README.md` — Ort für Argument Maps und Streitpunkte
+- `paper/outline.md` — nicht-finale Gliederungsschale
+- `paper/ki-verzeichnis.md` — Dokumentation der KI-Nutzung
 
-- 🍎 [macOS setup guide](./docs/setup-macos.md)
-- 🪟 [Windows setup guide](./docs/setup-windows.md)
-- 🐧 [Linux setup guide](./docs/setup-linux.md)
+## Hinweis
 
-The [`docs/`](./docs/README.md) directory has the full walkthrough including how to install Git itself if you don't have it.
-
-## What's in the box
-
-Configured in [`apm.yml`](./apm.yml):
-
-- **Target:** `claude` — APM configures everything for Claude Code
-- **APM dependencies:**
-  - `anthropics/skills/skills/pdf` — Anthropic's PDF skill
-  - `./agents` — local agents in this repo
-- **MCP servers:**
-  - `parallel-search` — `https://search-mcp.parallel.ai/mcp`
-  - `deepwiki` — `https://mcp.deepwiki.com/mcp`
-
-## Project layout
-
-```
-.
-├── agents/        # Local agents (registered as an APM dependency)
-├── docs/          # Setup guides (macOS / Windows / Linux)
-├── research/      # Research artifacts
-├── sandbox/       # Scratch space
-├── scripts/       # Project scripts
-├── apm.yml        # APM manifest — source of truth for deps & MCPs
-├── links.md
-└── READING-LIST.md
-```
-
-## Verify your setup
-
-```bash
-git --version
-uv --version
-apm --version
-```
-
-If any of these fail, see the [setup guides](./docs/README.md).
-
-## License
-
-MIT
+Das Wiki ist ein Arbeitsgedächtnis, keine zitierfähige Quelle. Für die Seminararbeit sollten Aussagen immer auf die ursprünglichen Papers, Seminarunterlagen oder geprüften Praxisquellen zurückgeführt werden.

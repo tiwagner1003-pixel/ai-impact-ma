@@ -1,5 +1,9 @@
 __pycache__/
 sandbox/
+.DS_Store
 
 # APM dependencies
 apm_modules/
+
+# PDFs (zu groß / urheberrechtlich geschützt — separat via Google Drive teilen)
+*.pdf

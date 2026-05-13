@@ -1,0 +1,2041 @@
+WORKING PAPER SERIES
+
+No. 150 | July 2024
+
+Degen, Dominik | Kengelbach, Jens | Kim, Daniel |
+Sievers, Sönke | Wang, Yiran
+
+Large language models and M&A:
+Can ChatGPT help forecast M&A
+activity?
+
+TRR 266 Accounting for Transparency
+Funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation):
+Collaborative Research Center (SFB/TRR) – Project-ID 403041268 – TRR 266 Accounting for Transparency
+
+www.accounting-for-transparency.de
+
+Electronic copy available at: https://ssrn.com/abstract=4862121
+
+Large Language Models and M&A:
+Can ChatGPT help forecast M&A activity?
+
+Dominik Degena,b, Jens Kengelbacha, Daniel Kima, Soenke Sieversb, Yiran Wanga
+First version: February 23, 2024
+This version: July 1, 2024
+
+Abstract
+This paper employs ChatGPT on firms’ earnings conference calls transcripts to extract managers’
+so far private information regarding their sentiment and expectations concerning (future) mergers
+and acquisitions (M&A) activity. We aggregate these firm-level scores to a market wide ChatGPTbased M&A sentiment score (MASS) and successfully perform various construct validity checks
+including employing M&A experts and back testing. Our main results suggest that M&A sentiment
+has strong forecasting power for future M&A activity and adds additional explanatory power to
+established sentiment indices and fundamental drivers. The predictability holds for both in-sample
+and out-of-sample tests. Overall, our novel index will be useful to further understand M&A
+patterns, to predict future M&A activity, and for practitioners to evaluate and benchmark their own
+M&A activities.
+
+Keywords: Mergers and Acquisitions, Takeover Waves, M&A Sentiment, Generative AI, LLMs, ChatGPT, Textual
+Analysis
+JEL Classification: G34
+Acknowledgments: We would like to thank Ashish Baid and Thomas Endter for providing extensive input and
+comments based on their M&A expertise. Furthermore, we are thankful for the technical support provided from
+Reeyarn Li and Francesca Pietrogrande. Finally, Soenke Sievers greatly acknowledges funding by the Deutsche
+Forschungsgemeinschaft (DFG, German Research Foundation)—Project-ID 403041268— TRR 266. All errors are
+our own.
+a
+
+Boston Consulting Group, Ludwigstrasse 21, 80539 Munich, Germany, degen.dominik@bcg.com (corresponding
+author), kengelbach.jens@bcg.com, kim.daniel@bcg.com, wang.yiran@bcg.com,
+b
+Paderborn University, Warburger Str. 100, 33098 Paderborn, Germany, soenke.sievers@wiwi.uni-paderborn.de
+
+1
+Electronic copy available at: https://ssrn.com/abstract=4862121
+
+1.
+
+Introduction
+Mergers and acquisitions (M&A) are a major tool for corporate executives to restructure and
+adjust their firms to the continuously changing economic and competitive landscape. Thus,
+understanding firm’s M&A behavior over time has sparked researchers’ and practitioners’
+interest for decades given its tremendous importance for the involved firms, their executives
+and employees, and overall capital spending. Prior literature has established that M&A activity
+occurs in waves and that trade networks, economic, regulatory, and technological shocks
+determine merger waves (e.g., Harford, 2005; Ahmad et al., 2021). Furthermore, other
+fundamental factors such as valuation levels and financial conditions influence merger
+patterns and thus future aggregate M&A activity (Rhodes-Kropf and Viswanathan, 2004;
+Cornaggia and Li, 2019). However, private information and expectations of managers might
+play a key role in driving M&A activity over time given that recent research shows that firms’
+expectations and sentiments appear to be a very important determinant of stock returns as well
+as general investment activities (e.g, Jiang et al., 2019; Gennaioli et al., 2016). Altanlar et al.
+(2024) establish that aggregate manager sentiment also impacts payment choices in M&A as
+well as acquirer’s stock market reactions.
+One channel to convey private information about planned deal activity are transcripts from
+earnings conference calls. While it was challenging in the past to extract those expectations
+out of thousands of these reports, the advent of natural language processing and textual
+analysis (including its sub-discipline sentiment analysis) as well as large language models
+(LLMs) have made this task feasible. Thus, this paper builds a novel M&A sentiment score
+(MASS) leveraging ChatGPT to extract private information from firm’s conference calls
+transcripts regarding M&A activity. The core result is that our sentiment score predicts future
+
+2
+Electronic copy available at: https://ssrn.com/abstract=4862121
+
+M&A deal volume on a global scale for up to 18 months controlling for other well-established
+general sentiment indices and firm fundamentals. Furthermore, it is useful in various markets
+and industries.
+Our paper complements the quickly growing literature on LLMs that investigate other
+interesting variables such as stocks returns, asset class selection or other financial
+communication such as Federal Reserve announcements.
+Turning to the literature on stock returns Bond et al. (2023) investigate the predictive
+capabilities of LLMs, ChatGPT and BARD, in the context of forecasting aggregate stock
+market returns by extracting relevant daily summaries of business news from which they
+construct a market sentiment indicator. Relatedly, Lopez-Lira and Tang (2023) examine the
+potential of ChatGPT and other LLMs to predict stock market returns by categorizing news
+headlines with ChatGPT as positive, negative, or neutral for companies’ stock prices and
+document a significant correlation between their ChatGPT scores and subsequent daily stock
+returns. In contrast, Kim et al. (2023) probe the economic usefulness of ChatGPT by using
+summaries of complex corporate disclosures to explain stock market reactions. Kim et al.
+(2024) also study whether LLMs can perform financial statement analysis like a professional
+human analyst and find, for instance, that ChatGPT outperforms financial analysts in their
+ability to predict earnings changes. Kirtac and Germano (2024) test three LLMs, Bert,
+FinBERT, and GPT-3-based OPT for sentiment analysis of news articles to predict stock
+market returns against the benchmark of classical dictionary-based sentiment analysis (using
+the dictionary of Loughran and McDonald (2011)).
+Ko and Lee (2023) employ ChatGPT to select asset classes and evaluate the diversification
+effect of its selections to gain a better understanding of LLMs as potential assistants for
+
+3
+Electronic copy available at: https://ssrn.com/abstract=4862121
+
+portfolio managers. While Hansen and Kazinnik (2023) show that LLMs like ChatGPT can
+decode Fedspeak (i.e., the language used by the Fed to communicate on monetary policy
+decisions), Beckmann et al. (2024) devise a prompting strategy for ChatGPT to identify and
+analyze unusual aspects of financial communication. Bai et al. (2023) introduce a new
+measure of information content (Human Machine Differences, HAID) by analyzing the
+difference between answers provided by actual corporate CFOs and CEOs and those given by
+LLMs to questions from earnings conference calls Q&A sessions. In a different setting, Jha et
+al. (2023) use ChatGPT to extract managerial expectations of corporate policies from
+disclosures by creating a firm-level ChatGPT investment score, based on conference call texts,
+that measures managers’ anticipated changes in capital expenditures but not aggregate M&A
+activity as we do in this paper. Andreou et al. (2023) use ChatGPT to validate whether forwardlooking R&D disclosures in 10-K filings appear to be overly optimistic.
+There is also a growing body of literature offering comprehensive reviews on the topic. While
+Dong et al. (2023) provide an initial review of publications and working papers on ChatGPT
+and related Large Language Models (LLMs) in accounting and finance, a paper by Chen et al.
+(2023) reviews recent developments of generative AI in business and finance, summarizes its
+practical applications, provides examples of the latest generative AI tools, and demonstrates
+that generative AI can revolutionize data analysis in industry and academia.
+Contrary to the existing literature mentioned above, our research focuses on the application of
+sentiment analysis with LLMs to forecast future M&A activity. Specifically, we pose the
+research question: Can the private information and expectations of managers about future
+M&A transactions – referred to as 'M&A sentiment' and derived through generative AI tools
+such as ChatGPT – serve as a predictive indicator for overall future M&A deal volume?
+
+4
+Electronic copy available at: https://ssrn.com/abstract=4862121
+
+We answer this question using 40,776 conference call transcripts from July 2013 to December
+2023 for the 1,200 unique companies of the S&P Global 1200 Index. To be precise, for each
+conference call, we identified the paragraphs where M&A topics are addressed and then ask
+ChatGPT to generate an M&A sentiment score between -2 (very negative) and +2 (very
+positive) related to the sentiment of future M&A activity and aggregate the results to form an
+M&A sentiment score (MASS). We then perform several tests to validate our score.
+First, we challenge the results of ChatGPT by – for a sample of paragraphs from 100 randomly
+selected M&A-relevant conference call transcripts – comparing its results to other LLMs and
+the assessments of human M&A experts. Our results show that there is a high correlation
+between the results of the LLMs and the human experts. We choose to use the GPT-4.0 model
+as it has the highest correlation with the consensus answers of the human experts.
+Second, we also investigate the correlation between our results and realized deal activity to
+assess its usefulness. We also test several transformations of our score – which are time lags,
+differences vs. absolute levels, and quintiles separation – and their combinations to find the
+best predictor. Given that there is a large literature regarding the preparation time of M&A
+transactions including target identification, deal negotiation etc., we deliberately investigate
+meaningful lag structures of our index and our outcome variable MASS.1 In line with prior
+literature and economic intuition, we find that a 18-month lagged structure is most useful for
+predicting aggregate M&A activity.
+Third, we perform extensive (back) testing. We compare MASS against several other wellestablished indices such as the University of Michigan Consumer Confidence Index, the
+OECD Business Confidence Index, and two Investor Sentiment indices (Baker and Wurgler,
+
+1
+
+This lead-lag structure is also employed in other papers such as Gennaioli et al., 2016; Jiang et al., 2019, p.
+144, table 12.
+
+5
+Electronic copy available at: https://ssrn.com/abstract=4862121
+
+2006; Huang et al., 2015). We find that, while most of these indices are also indicators of
+future M&A activity, our MASS provides incremental predictive power above these indices.
+Fourth, we also compare MASS against fundamental factors such as interest rates, market
+volatility, valuation levels, and others. If our index captures managers’ expectations in addition
+to fundamentals, we expect that it contains incremental predictive power for future M&A
+activity. This expectation is based on other recent studies using textual analysis to capture
+investor or manager sentiment and, for instance, predict aggregate stock returns (e.g., Jiang et
+al., 2019). We can conclude that our MASS seems to capture valuable information which goes
+beyond information already included in fundamental factors – a finding that is both
+statistically and economically significant.
+Fifth, we perform a forecast encompassing test and out-of-sample forecasting to further test
+our findings. In the out-of-sample forecasting – similar to the results of the forecast
+encompassing test – MASS outperforms other sentiment indices besides the OECD Business
+Confidence Index. However, when combining the OECD Business Confidence Index with
+MASS, we still can improve forecasting performance, establishing that MASS adds predictive
+power.
+Overall, our empirical results suggest that M&A sentiment has strong forecasting power for
+future M&A activity. The predictability holds for both in-sample and out-of-sample tests and
+can generate significant insights for decision makers involved in M&A activities.
+
+6
+Electronic copy available at: https://ssrn.com/abstract=4862121
+
+2.
+
+Data and methodology
+2.1. Data and preparation
+We use public companies’ earnings call transcripts for the purpose of extracting firms’
+sentiment towards M&A for all companies of the S&P Global 1200 index (the index
+constituents) as of January 2024 for the period July 2013 to December 2023 from Refinitiv
+(now part of LSEG), resulting in a total of 39,696 unique transcripts. Earnings calls (and their
+transcripts) usually consist of two parts: a management presentation and a Q&A session. In
+the management presentation the firm’s executives comment on current operations and
+oftentimes provide guidance for the (near) future. In the Q&A session financial analysts and
+other participants can ask questions to the management team. Even though some researchers
+do not consider the management presentation for analysis because it is assumed that these
+convey less novel information (e.g., Lee, 2016; Li et al., 2021), we take both parts into account
+as both provide incremental information compared to the financial reports and press releases
+(e.g., Matsumoto et al., 2011).
+The transcripts are provided in a .txt file format. Conscious of processing time and budget, we
+then extract a random sample of 25% of the identified paragraphs yielding a total of 9,805
+unique transcripts for further analysis. We distill the paragraphs relevant for M&A from these
+transcripts using a list of M&A-related keywords (see appendix A.1), resulting in a total of
+154,335 mentions of a M&A keyword within 37,549 identified paragraphs within a total of
+9,421 relevant transcripts. For all paragraphs, we also extract the date and time of the earnings
+call and the company’s name and ticker.
+
+7
+Electronic copy available at: https://ssrn.com/abstract=4862121
+
+2.2. Methodology, prompting, and language model selection
+ChatGPT and sentiment analysis
+ChatGPT, developed by OpenAI, is an advanced artificial intelligence language model that
+utilizes the GPT (Generative Pre-trained Transformer) architecture to deliver human-like text
+based on input prompts (see, e.g., Vaswani et al., 2017). As a Large Language Model (LLM),
+ChatGPT has been trained on a diverse dataset encompassing a wide array of internet text.
+This extensive training enables the model to generate coherent and contextually relevant text
+responses based on the input it receives. This capability not only facilitates a broad spectrum
+of applications ranging from text generation such as summarization to conversation simulation
+such as answering questions and engaging in dialogue. It can also – and in our context will –
+be used for sentiment analysis, i.e., discerning the emotional tone behind a body of text.
+Sentiment analysis, a sub-discipline of natural language processing (NLP), involves the
+computational identification and categorization of opinions or emotions within text data to
+allow the extraction of subjective information. It traditionally relies on complex algorithms
+that parse text to detect sentiments such as positivity, negativity, neutrality, or more nuanced
+emotions. Methods commonly used for sentiment analysis are rule-based methods usually
+utilizing word lexicons (e.g., Loughran and McDonald, 2011; Loughran and McDonald, 2016;
+Karapandza, 2016; Humphery-Jenner, 2024; Massoud et al., 2024) as well as machine learning
+algorithms (e.g., Naive Bayes, support vector machines) and hybrid methods (e.g., Loughran
+and McDonald, 2024; Hertel et al., 2024, Bhagwat et al., 2024).
+ChatGPT's capability to understand and generate human-like text makes it exceptionally
+suited for sentiment analysis tasks. Its understanding of language nuances and context offers
+an intuitive approach to sentiment analysis. By processing the input text, it can capture the
+
+8
+Electronic copy available at: https://ssrn.com/abstract=4862121
+
+sentiment it conveys. We access ChatGPT through the OpenAI API (application programming
+interface) enabling us to automate sentiment analysis on a large scale using our conference
+call transcript dataset.2
+
+Prompt engineering
+The text inputs – that provide context and instructions – given from users to an LLM are called
+prompts. Prompts are written in natural human language and their framing affects the output
+of the model. Prompt engineering is the craft of writing effective prompts that enhance output
+quality for specific tasks by influencing the model’s behavior (e.g., Brown et al., 2020;
+Reynolds and McDonell, 2021; Dong et al., 2023; Gao, 2023; White et al., 2024).
+We use the following prompt in our study and apply it to the relevant paragraphs:
+As a finance expert, determine whether the paragraph is related to Mergers and Acquisitions
+(M&A). If it is M&A-related, rate its sentiment towards M&A on a scale from -2 to 2, where:
+-2 indicates a very negative sentiment
+-1 indicates a mildly negative sentiment
+0 indicates a neutral sentiment
+1 indicates a mildly positive sentiment
+2 indicates a very positive sentiment
+If the paragraph is not related to M&A, the sentiment should be marked as null.
+Furthermore, analyze if the paragraph indicates any reference towards future M&A
+activities.
+Format your response as a JSON object with the keys "M&A related", "Sentiment", and
+"Future reference". The values for "M&A related" and "Future reference" should be
+formatted as booleans.
+
+There are many other LLMs such as Gemini (previously called BARD, developed by Google), Claude (developed
+by Anthropic), or Perplexity.AI to list a few, and we elaborate below in a separate section, why we choose ChatGPT.
+2
+
+9
+Electronic copy available at: https://ssrn.com/abstract=4862121
+
+Review text: '''{text}'''
+In this prompt, we ask ChatGPT, to assume the role of a finance expert (“role prompting”).
+The term “{text}” is substituted with the respective paragraph during the query. The task is to
+first assess whether the paragraph is indeed related to M&A. Second, we ask to provide an
+estimate whether the sentiment of the paragraph is very negative (-2), negative (-1), neutral
+(0), mildly positive (+1), or very positive (+2). All paragraphs not related to M&A should be
+marked as “null”. In addition, we ask ChatGPT whether the paragraph is related to future
+M&A activity, i.e., whether it is a forward-looking statement. We have set the temperature
+parameter (a parameter of ChatGPT models that governs the randomness and the creativity of
+the responses) to zero to obtain answers as objective and reproducible as possible.
+
+Large language model selection and construct validity checks
+Currently, there is emerging academic literature that test different LLMs regarding their
+performance and effectiveness in supporting finance and accounting research (e.g., Rane et
+al., 2024). In addition, there are efforts to train specific LLMs, for instance, for finance
+applications (so called FinLLMs) (e.g., Li et al., 2023).
+For our analyses, we have predominantly relied on the latest version of OpenAI’s ChatGPT,
+which at the time of our analyses was GPT-4.0. However, we have also tested other LLMs
+such as OpenAI’s GPT-4o and GPT-3.5-Turbo, Perplexity AI, Claude (from Anthropic) and
+Gemini (from Google, formerly known as BARD). For the tests, we have compiled a sample
+of M&A-related paragraphs from 100 randomly selected M&A-relevant earnings call
+transcripts and provided all the above listed LLMs with the same prompt. In addition, we also
+leveraged BCG’s global network of M&A experts and exposed them with the same sample
+
+10
+Electronic copy available at: https://ssrn.com/abstract=4862121
+
+and prompt that was given to the LLMs to investigate whether human intelligence and
+artificial intelligence align with each other. In appendix A.2, we have listed a few exemplary
+paragraphs and the respective answers from GPT-4.0, GPT-3.5-Turbo, Gemini, and the
+consensus answers from the human experts.
+Our test results show that there is a high correlation between the human and the machine
+answers (see appendix A.3). It also shows that the deviation between the different answers of
+the human experts is not much unlike the deviation between the answers of the LLMs. The
+highest correlation between the human consensus answers is with GPT-4.0, which is the model
+that we have then chosen for our analyses.
+In addition, to gain a better understanding whether ChatGPT can identify M&A sentiment, we
+have generated word clouds for paragraphs with high and low ChatGPT predicted scores (+2
+and −2) to identify common themes (see appendix A.4). The word clouds differ significantly.
+The high M&A sentiment score cloud reveals positive words such as “well”, “strong”, and
+“good” as well as themes such as “growth”, “integration” or “result” indicating a positive
+stance on M&A. In contrast, the low M&A sentiment score cloud shows negative connotated
+words such as “negative” or “failed” and uncovers themes around “charge”, “impairment”, or
+“goodwill” indicating difficulties with M&A deals.
+Lastly, please note that our results are biased against finding support for our research question,
+if other LLMs are more powerful to extract sentiment given that this would provide even
+stronger support for our predictions.
+
+11
+Electronic copy available at: https://ssrn.com/abstract=4862121
+
+Calculation of the M&A sentiment score
+After analyzing all paragraphs and assigning a sentiment (-2, -1, 0, +1, +2) to each one, we
+calculate a simple average for each transcript – equally weighting all paragraphs’ sentiments.
+We then apply the same methodology, i.e. using simple averaging, to aggregate all transcripts
+of a given month to form a monthly aggregate. To arrive at the raw score, which we will
+analyze and transform into our newly developed variable, called MASS in section 3, we, lastly,
+calculate a rolling 3-month moving average. This has several advantages: Due to quarterly
+reporting and earnings call cadence, using this 3-months window captures one reporting cycle
+for all companies in the S&P Global 1200 index. Additionally, it helps to smoothen volatility
+in the raw score for months with a low number of transcripts, usually the last month of each
+quarter.
+
+2.3. Additional data: Further indices and fundamental variables
+To perform comparative analysis and other tests (see also, e.g., Jiang et al., 2019), we use four
+established and well-documented indices, which have been developed to measure investor,
+consumer, and business sentiment (see appendix A.5 for variables definitions and sources).
+•
+
+BAKER_WURGLER: The Baker and Wurgler (2006) investor sentiment index is the
+first principle component of six stock market-based sentiment proxies, including the
+closed-end fund discount, NYSE share turnover, the number and average first-day
+returns on IPOs, the equity share in new issues, and the dividend premium.
+
+•
+
+HUANG_ET_AL: An investor sentiment index developed by Huang et al. (2015),
+which exploits the information in Baker and Wurgler’s six investor sentiment proxies
+more efficiently using the partial least square method.
+
+12
+Electronic copy available at: https://ssrn.com/abstract=4862121
+
+•
+
+UM_CSI: The University of Michigan consumer sentiment index is a monthly survey
+conducted by phone based on a representative sample of US households.
+
+•
+
+OECD_BCI: The OECD Business Confidence Index is an indicator derived from
+opinion surveys about future developments in production, orders, and stocks of
+finished goods in the industrial sector.
+
+These sentiment indices have been widely used in various studies (e.g., Stambaugh et al.,
+2012; Sibley et al., 2016; Jiang et al., 2019; McGurk et al., 2020). However, it is also possible
+that the explanatory power of the M&A sentiment index for M&A activity comes from its
+information about the business cycle and other economic or financial conditions, which have
+been established in the M&A wave literature (e.g., Harford, 2005; Ahmad et al., 2021; RhodesKropf and Viswanathan, 2004; Cornaggia and Li, 2019). To control for this, we have also
+leveraged several fundamental indicators such as volatility, valuation levels, leverage levels,
+etc. (see appendix A.5 for variables definitions and sources).
+We provide an overview of summary statistics for all relevant variables in Table 1.
+
+[INSERT TABLE 1 ABOUT HERE]
+
+3.
+
+Results
+In this section, we investigate the statistical and economic significance and explanatory power
+of our ChatGPT generated M&A sentiment score. We first test which transformation, i.e., leadlag-structure etc., of the raw sentiment score has the highest explanatory power (which we
+will then call MASS). Secondly, we then compare it with four established economic indices
+as well as several fundamental factors such as interest rates, volatility, etc. Lastly, we explore
+
+13
+Electronic copy available at: https://ssrn.com/abstract=4862121
+
+its out-of-sample performance to investigate the information content in our newly developed
+core variable.
+
+3.1. Transformation and creation of MASS
+In a first step, we plot the ChatGPT-derived sentiment (our raw M&A sentiment score) and
+the actual realized deal activity (measured as monthly number of M&A deals with a deal value
+above $100 million USD) to investigate the correlation between the two timeseries.
+In Figure 1, the solid blue line depicts our raw M&A sentiment score while the solid red line
+represents M&A deal activity. The dashed and dotted lines represent the Baker and Wurgler
+(2006) investor sentiment index (BAKER_WURGLER), the Huang et al. (2015) aligned
+investor sentiment index (HUANG_ET_AL), the consumer sentiment index from the
+University of Michigan (UM_CSI), and the OECD business confidence index (OECD_BCI).
+
+[INSERT FIGURE 1 ABOUT HERE]
+
+While we cannot identify a clear co-movement between the two variables, M&A sentiment score
+and M&A deal activity, we hypothesize that there are many factors at work which lead to a more
+indirect relationship between our raw M&A sentiment score and realized deal activity. Thus, we
+test the following three hypotheses:
+H1: M&A deals need time to be prepared and executed. Thus, positive M&A sentiment
+will need several months, potentially up to 1-2 years, to materialize in announced deals as
+deal preparation and execution take time, e.g., to source target companies, conduct due
+
+14
+Electronic copy available at: https://ssrn.com/abstract=4862121
+
+diligence (e.g., Aktas et al., 2013; Daley et al., 2024) or prepare business units or
+subsidiaries for divestiture.
+H2: The absolute sentiment level might not be the driving force but rather changes in
+sentiment or its momentum. During periods of changing external factors, decision makers
+might hold back or engage more in M&A than during stable times. This follows the M&A
+wave literature (e.g., Harford, 2005; Ahmad et al., 2021; Rhodes-Kropf and Viswanathan,
+2004, Cornaggia and Li, 2019) as well as stock market literature related to sentiment (e.g.,
+Carhart, 1997).
+H3: Potentially, sentiment only really matters during times (i.e., regimes) of very positive
+or very negative sentiment. While in „normal times” it’s not so much about sentiment but
+rather other factors. This aligns with the prevailing view in the relevant literature (e.g.,
+Duchin and Schmidt, 2013).
+To test these hypotheses, we run several regressions to identify, which transformation of our
+raw M&A sentiment score is the best predictor for realized M&A activity. In the following,
+the dependent variable for all regressions is the announced number of deals with a deal value
+of more than $100 million USD.
+Based on the hypothesis 1 (H1) that M&A activity needs preparation time and a decision to
+engage in transactions does not immediately lead to closed deals, we investigate how deal
+activity is explained by the lagged raw sentiment score. To do so, we regress M&A activity
+against lagged values of our raw sentiment score.
+
+[INSERT TABLE 2 ABOUT HERE]
+
+15
+Electronic copy available at: https://ssrn.com/abstract=4862121
+
+The results confirm our initial hypothesis as lagged sentiment turns statistically significant
+starting with a lag of 9 months. The best performance in the sense of adj. R2 is achieved when
+lagging the sentiment score by 18 months; this lag is also highly significant with a t-statistic
+of 3.5 and adj. R2 of 9.1%. After 18 months, explanatory power decreases again. This result is
+in line with Hypothesis 1 that it takes companies about 1-2 years to act on positive sentiment
+towards M&A through announced and, subsequently, closed deals.
+Our results of a negative coefficient for lagged sentiment for 6 months lag and beyond, also
+indicate some cyclical behavior in M&A activity. One could assume that the negative
+coefficient is driven by the fact that a highly positive sentiment indicates a late stage of the
+cycle and several months later deal activity will be down again. This is comparable to the
+finding that in stock markets, very positive sentiment can be an indicator for subsequently
+lower equity returns—thereby indicating a later stage of the market cycles (e.g., Arif and Lee,
+2014).
+Next, we test Hypothesis 2 whether sentiment momentum drives deal activity. Aligned with
+our earlier finding, we use lagged differences (i.e. comparing current sentiment with prior
+sentiment) in the regression against M&A activity.
+
+[INSERT TABLE 2 ABOUT HERE]
+
+The results are consistent with our Hypothesis 2 as the lagged difference is statistically
+significant again and has the expected positive sign. Positively changing sentiment seems to
+be driving M&A activity 12-18 months later. Again, the best predictive power is achieved with
+a lag of 18 months with a t-statistic of 2.44 and adj. R2 of 6.2%.
+
+16
+Electronic copy available at: https://ssrn.com/abstract=4862121
+
+Lastly, we test Hypothesis 3 that in fact the extreme values of sentiment matter more than the
+sentiment ranges “in the middle”. Thus, we divide the sentiment index into quintiles (again
+lagged by 18 months in line with our findings regarding H1 and H2). We then run a regression
+with the corresponding indicator variables for each of the quintiles. Our results indicate indeed
+that being in the extreme 20% (positive or negative) has a significant impact on deal activity
+while the three groups in the middle do not have a significant effect on deal activity. This is in
+line with the literature mentioned above and support our hypotheses 3.
+
+[INSERT TABLE 4 ABOUT HERE]
+
+Based on the above results establishing that the 18 months lagged ChatGPT generated
+sentiment variable shows the best predictive performance (measured through adj R2), we
+finally have to investigate whether we should employ the 18 months lagged raw sentiment
+score , lagged sentiment momentum (i.e. changes in the raw sentiment) or both. Therefore, we
+perform a multivariate regression including MASS and MASS momentum.
+
+[INSERT TABLE 5 ABOUT HERE]
+
+The regression results are reported in Table 5. While the difference variable is statistically
+insignificant, the lagged sentiment remains economically and statistically significant.
+Therefore, for the rest of the paper, we will rely only on MASS as indicator for M&A
+sentiment.
+
+17
+Electronic copy available at: https://ssrn.com/abstract=4862121
+
+3.2. Comparison with other indices
+In the remainder of the paper, we further scrutinize our MASS and its additional value beyond
+other sentiment-related indices as well as fundamental indicators. To get a first view and
+insight on how our MASS compares with other indices, we report the correlation matrix in
+figure 2.
+
+[INSERT FIGURE 2 ABOUT HERE]
+
+Our MASS has a (absolute) correlation coefficient between 26% and 46% with the other four
+indices as defined in section 2.3. It is positively correlated with BAKER_WURGLER and
+HUANG_ET_AL, which indicates that it is to some degree capturing similar information; but
+also seems to have substantial other information as we will see in the later analyses. MASS is
+correlated with -46% with the UM_CSI, which is a similar picture to the other two “sentiment
+measurements”. They also have a strong negative correlation with this consumer sentiment
+index. In line with economic intuition, this finding indicates that our MASS as well as the
+other two indices capture something that is quite distinct from “consumer sentiment”; these
+three indices are capturing private information of companies and their top management rather
+than “uninformed general public” sentiment as the UM_CSI does. Interestingly, the
+correlation with OECD_BCI is negative as well; this could be connected to the cyclicality
+argument made earlier.
+Next, we put MASS to a test versus these indices and analyze whether MASS is still a
+significantly contributing factor for predicting M&A activity when including these other
+indices. To perform a like-for-like comparison, we also lagged all other indices by 18 months.
+
+18
+Electronic copy available at: https://ssrn.com/abstract=4862121
+
+[INSERT TABLE 6 ABOUT HERE]
+
+The results reported in Table 6 show interesting insights: All other indices, apart from
+HUANG_ET_AL, are also significantly correlated with M&A activity. Furthermore, our
+MASS remains statistically significant even when combining it with one or all other indices.
+Lastly, a combination of MASS and OECD_BCI alone can explain 44% of deal activity 18
+months later, which is a large value considering the complex market for corporate transactions.
+Also, economically, the coefficient of MASS has a relevant magnitude. Considering
+regression (5) from Table 6, a one-standard-deviation increase in MASS lowers predicted
+M&A deal volume by almost 4%.
+
+3.3. Comparison with fundamental factors
+Following the M&A wave literature (see, e.g., Harford, 2005) M&A activity is driven by
+fundamental factors. Fundamental factors are variables, which are measured on an aggregate
+level and mostly the result of market activity or other economic equilibria. It is, therefore, a
+natural next step to also compare our MASS with these fundamental factors. There is a wide
+body of established research on determinants of M&A activity (mostly in the context of the
+“M&A waves” literature). 3 Harford (2005) shows that economic, technological, and
+regulatory shocks in combination with capital liquidity drive merger waves. Dittmar and
+
+Research in this area is often clustered in two strings of theory that are somewhat overlapping: The neoclassical
+efficiency hypothesis based on rational decision making and market efficiency and the market misvaluation hypothesis
+focused on irrational market misvaluations and behavioral aspects such as manager discretion (e.g., Shleifer and
+Vishny, 2003; Rau and Stouraitis, 2011). Martynova and Renneboog (2008) divide the M&A waves research into four
+clusters.
+3
+
+19
+Electronic copy available at: https://ssrn.com/abstract=4862121
+
+Dittmar (2008) find evidence that merger activity is procyclical to the business cycle. An
+often-postulated source of the variation in M&A activity is (stock) market cyclicality and
+valuation levels (e.g., Jovanovic and Rousseau, 2001; Shleifer and Vishny, 2003; RhodesKropf and Viswanathan, 2004; Rhodes-Kropf et al., 2005; Morellec and Zhdanov, 2005; Dong
+et al., 2006). Another frequently investigated area of activity drivers is financing, from credit
+market conditions and liquidity to cash holdings and leverage (e.g., Maksimovic et al., 2013;
+Uysal, 2011; Erel et al., 2021). Other drivers are related to market uncertainty and economic
+conditions. While Bhagwat et al. (2016) focus on the link between M&A deals and market
+conditions (using the volatility index VIX as a measure for uncertainty), Gulen and Ion (2015)
+as well as Bonaime et al. (2018) focus on the impact of political and regulatory uncertainty on
+investment and M&A activity. Ferris et al. (2013) establish that CEO (over)confidence also
+plays a critical role in M&A activity.
+Based on the above-mentioned literature, we have selected six variables for our comparative
+analysis to cover the most common themes, of course, acknowledging that there are further
+variables that could be used for testing:
+•
+
+Stock market index level (SPIDX): Indicator for the broader state of the market and
+economy.
+
+•
+
+Valuation levels (SPVAL): Indicator for current “price point” and particulary relevant for
+deals with shares as method of payment.
+
+•
+
+Interest rates (IGR): Cost of capital and financing conditions are a key item in any
+investment and M&A decision.
+
+•
+
+Leverage (SPLEV): Indicator for financial firepower and flexibility to do M&A deals.
+
+20
+Electronic copy available at: https://ssrn.com/abstract=4862121
+
+•
+
+Market volatility (VIX): Indicator of risk; M&A activity is usually lower in high-risk
+environments.
+
+•
+
+Business confidence (OECD_BCI): Indicator for broader economic conditions, manager
+sentiment, and expectations. We have again relied on the OECD_BCI as a fundamental
+variable (in addition to being one of our benchmark indices in section 3.2) as it covers
+above-mentioned factors such as CEO confidence and political, regulatory, and economic
+uncertainty.
+
+For details on the indices and data points used, please refer to appendix A.5 (variables
+definitions and sources).
+Table 7 shows regression results for monthly deal activity against each fundamental factor
+alone and then against a combination of the fundamental factor and our MASS. The results in
+Table 7 imply, first, that many fundamental factors alone are already decent predictors for
+M&A activity—especially IGR and OECD_BCI. Second, and most importantly, our MASS
+remains statistically significant when combined with each of the fundamental factors (tstatistic >1.81 for all models). Also, adding MASS to a multi-factor regression increases the
+adjusted R2 by 4-12 percentage points, which is statistically and economically significant. For
+all fundamental variables, we can also reject the null hypothesis of a log-likelihood test that
+the model with only the respective fundamental variable performs better than the alternative
+model including our MASS.
+
+[INSERT TABLE 7 ABOUT HERE]
+
+21
+Electronic copy available at: https://ssrn.com/abstract=4862121
+
+From an economic significance point of view, the coefficients for MASS from Table 7 imply
+a sizeable effect between -3% and -9% per standard deviation increase of MASS compared to
+the historical average deal volume.
+In sum, we conclude that our MASS seems to capture valuable information, which goes
+beyond information already included in fundamental factors. To conclude our analysis, we
+consider its performance for our-of-sample forecasting in the next section.
+
+3.4. Forecast encompassing test
+We assess the information content of our M&A Sentiment Score (MASS) against the four
+indices introduced in section 3.2. by conducting a forecast encompassing test, which is a
+statistical method used to directly compare two sets of forecasts and determine whether one
+set of forecasts contains all the relevant information from the other set, thereby rendering the
+other redundant. We follow the approach developed by Harvey et al. (1998) also applied by
+Jiang et al. (2019) and Table 8 reports the p-values for the test. The statistic corresponds to a
+one-sided (upper-tail) test of the null hypothesis that the predictive regression forecast for the
+monthly M&A activity based on one of the predictors given in the first column encompasses
+the forecast based on one of the predictors given in the first row, against the alternative
+hypothesis that the forecast given in the first column does not encompass the forecast given
+in the first row. The predictors are our M&A Sentiment Score (MASS), the Baker and Wurgler
+(2006) investor sentiment index (BAKER_WURGLER), the Huang et al. (2015) aligned
+investor sentiment index (HUANG_ET_AL), the University of Michigan consumer sentiment
+index (UM_CSI), and the OECD business confidence index (OECD_BCI). The sample period
+ranges from 2013 to 2023.
+
+22
+Electronic copy available at: https://ssrn.com/abstract=4862121
+
+[INSERT TABLE 8 ABOUT HERE]
+
+The results in Table 8 confirm our prior findings: MASS seems to capture information distinct
+from HUANG_ET_AL and UM_CSI as can be seen by p-values above 0.1 (Row 1 of Table
+8). Taking HUANG_ET_AL as an example, the coefficient of a regression of the error terms
+of the forecast using MASS regressed against HUANG_ET_AL has a p-value of 0.98. This
+indicates that there is no additional forecasting value included in HUANG_ET_AL after the
+first-step forecast using MASS. The BAKER_WURGLER index, however, seems to include
+additional forecasting value not yet included in our MASS.
+When using the alternative indices in the first step and then adding MASS in the second step
+(Column 1), we again confirm that MASS adds predictive value above and beyond
+HUANG_ET_AL and UM_CSI—but not versus BAKER_WURGLER and OECD_BCI.
+The other finding we have already seen before is the relatively strong performance of
+OECD_BCI. It seems to capture a lot of information already included in all the other indices.
+Thus, OECD_BCI alone seems to be a very strong predictor of M&A activity. But as we have
+also shown, adding our MASS to a prediction model improves its performance and is,
+therefore, beneficial in the context of predicting deal activity.
+
+3.5. Out-of-sample forecasting results.
+In this section, we investigate the out-of-sample forecasting performance of our M&A
+sentiment score (MASS) as well as the other indices in predicting the monthly deal volume.
+We consider the out-of-sample R2 (R2OS) following Campbell and Thompson (2008), which
+
+23
+Electronic copy available at: https://ssrn.com/abstract=4862121
+
+measures the decrease in the mean squared forecast error (MSFE) compared to simply using
+the historical average as predictor for the next period (see also Jiang et al, 2019 for an
+application of the Campbell and Thomson, 2008 approach). Additionally, we analyze the
+adjusted MSFE according to Clark and West (2007), which tests whether the out-of-sampleforecast of the employed index has a lower MSFE than the historical average as predictor. The
+results are reported in Table 9.
+Looking at R2OS, we confirm the earlier finding that MASS is a strong predictor for future
+M&A activity and that it outperforms other sentiment measures such as BAKER_WURGLER,
+HUANG_ET_AL and UM_CSI. However, OECD_BCI remains the strongest predictor
+among the group and significantly outperforms all others. It can predict almost half of the
+variance in monthly deal volume. This is confirmed by the p-values of the adjusted MSFE—
+but it is significant for all variables used.
+
+[INSERT TABLE 9 ABOUT HERE]
+
+Next, we investigate whether adding our MASS to a prediction which is based on OECD_BCI
+improves the predictive power. Based on the established literature that equal weighting of two
+information sets provides a powerful measure (e.g., Jiang et al, 2019), we run the same outof-sample tests for an index, which is the equally weighted average of MASS and OECD_BCI
+as well as for an average where the weights are freely determined in each period to optimize
+forecasting performance.
+These two indices and their results are listed as EW_MASS_BCI and FREE_MASS_BCI in
+Table 9. Adding the MASS increases the R2OS by 1.4%-points when weighting both equally
+
+24
+Electronic copy available at: https://ssrn.com/abstract=4862121
+
+and by 0.5%-points in the freely determined average. This result shows that while OECD_BCI
+is a strong predictor for deal value on its own, adding our MASS to the mix helps to
+statistically improve the forecasting performance.
+
+4.
+
+Conclusion
+In this study, we propose a novel M&A sentiment index constructed based on the aggregate
+textual tone of conference call transcripts employing ChatGPT. Being precise, we use
+ChatGPT to analyze M&A sentiment in individual transcripts from S&P Global 1200
+companies from July 2013 until December 2023. Next, we aggregate the individual sentiment
+scores and generate an aggregate M&A sentiment score (MASS) to test its usefulness for
+predicting future M&A activity.
+We find that the best prediction timeframe is 18 months, i.e., our raw M&A sentiment score
+is a useful indictor for M&A activity one and a half years in the future. Further, our results
+suggest that the momentum in sentiment as well as its level relative to the full range is also
+informing how M&A activity will behave in the future.
+Overall, we find that our MASS captures economic and statistical incremental useful
+information for predicting M&A activity compared to other established sentiment measures
+or fundamental factors. Therefore, when building a forecasting model for future M&A deal
+volumes, one should add MASS to the mix of variables as it increases predictive power
+significantly.
+While testing different LLMs, we found that GPT-4.0 came closest to our benchmark
+(consensus of human subject matter experts), while other LLMs did not lag far behind. Our
+approach can of course be developed further as the research and development of LLMs, and
+
+25
+Electronic copy available at: https://ssrn.com/abstract=4862121
+
+their applications advances continuously. Improved and new models as well as deeper insights
+into prompt engineering might open potential for continuous development. During our
+analyses, we were also intrigued by how powerful OECD’s Business Confidence Index seems
+to be in predicting M&A activity. We, therefore, see applications of the BCI as a potential
+future area for research in M&A and beyond.
+In sum, our empirical results suggest that M&A sentiment has strong forecasting power for
+future M&A activity. The predictability holds for both in-sample and out-of-sample tests and
+can generate significant insights for decision makers involved in M&A activities.
+
+26
+Electronic copy available at: https://ssrn.com/abstract=4862121
+
+CRediT authorship contribution statement
+Dominik Degen: Writing - Review & Editing, Writing - Original Draft, Project
+administration,
+
+Supervision,
+
+Visualization,
+
+Conceptualization,
+
+Methodology,
+
+Validation, Formal analysis, Software. Jens Kengelbach: Writing - Review & Editing,
+Resources. Daniel Kim: Writing - Review & Editing, Writing - Original Draft, Visualization,
+Conceptualization,
+
+Methodology,
+
+Validation,
+
+Formal
+
+analysis,
+
+Investigation,
+
+Software, Data Curation. Soenke Sievers: Writing - Review & Editing, Writing - Original
+Draft, Supervision, Visualization, Conceptualization, Methodology, Validation, Formal
+analysis, Software. Yiran Wang: Writing - Review & Editing, Methodology, Validation,
+Formal analysis, Investigation, Software, Data Curation.
+
+Declaration of competing interest
+The authors Dominik Degen, Jens Kengelbach, Daniel Kim, and Yiran Wang work for the
+Boston Consulting Group from which they receive salary. Soenke Sievers does not have any
+declarations of competing interest.
+
+Data availability
+The data is available from sources cited in the text. Our results are available upon request.
+
+References
+Ahmad, M. F., de Bodt, E., Harford, J. (2021). International Trade and the Propagation of
+Merger Waves. The Review of Financial Studies, 34 (10), 4876–4925.
+Aktas, N., de Bodt, E., Roll, R. (2013). Learning from repetitive acquisitions: Evidence from
+the time between deals. Journal of Financial Economics, 108 (1), 99-117.
+
+27
+Electronic copy available at: https://ssrn.com/abstract=4862121
+
+Altanlar, A., Amini1, S., Sunon, K.H. (2024). Aggregate Manager Sentiment and the Choice
+of Mergers and Acquisitions Payment Method. Working Paper, Available at SSRN:
+http://dx.doi.org/10.2139/ssrn.4815648.
+Andreou, P.C., Lambertides, N., Magidou, M. (2023) Stock Price Crash Risk and the
+Managerial Rhetoric Mechanism: Evidence from R&D Disclosure in 10-K filings. Working
+Paper, Available at SSRN: http://dx.doi.org/10.2139/ssrn.3891736.
+Arif, S., & Lee, C. M. C. (2014). Aggregate investment and investor sentiment. The Review
+of Financial Studies, 27 (11), 3241–3279.
+Bai, J., Boyson, N., Cao, Y., Liu, M., Wan, C. (2023). Executives vs. Chatbots: Unmasking
+Insights through Human-AI Differences in Earnings Conference Q&A. Working Paper,
+Available at SSRN: http://dx.doi.org/10.2139/ssrn.4480056.
+Baker, M., Wurgler, J. (2006). Investor sentiment and the cross-section of stock returns. The
+Journal of Finance, 61 (4), 1645–1680.
+Beckman, L., Beckmeyer, H., Filippou, I., Menze, S., Zhou, G. (2024). Unusual Financial
+Communication - Evidence from ChatGPT, Earnings Calls, and the Stock Market. Working
+Paper, Available at SSRN: http://dx.doi.org/10.2139/ssrn.4699231.
+Bhagwat, V., Dam, R., Harford, J. (2016). The Real Effects of Uncertainty on Merger Activity.
+The Review of Financial Studies, 29 (11), 3000-3034.
+Bhagwat, V., Shirley, S.E., Stark, J.R. (2024). Task-oriented speech and information
+processing. Journal of Banking & Finance, 161, 107095.
+Bonaime, A., Gulen, H., Ion, M., (2018). Does policy uncertainty affect mergers and
+acquisitions? Journal of Financial Economics, 129 (3), 531-558.
+Bond, S., Klok, H., Zhu, M. (2023). Large Language Models and Financial Market Sentiment.
+Working Paper, Available at SSRN: http://dx.doi.org/10.2139/ssrn.4584928.
+Brown, T, Mann, B. Ryder, N., Subbiah, M., Kaplan, J., Dhariwal, P., Neelakantan, A., Shyam,
+P., Sastry, G., Askell, A., Agarwal, S., Herbert-Voss, A., Krueger, G., Henighan, T., Child, R.,
+Ramesh, A., M. Ziegler, D.M., Wu, J., Winter, C., Hesse, C., Chen, M., Sigler, E., Litwin, M.,
+Gray, S., Chess; B., Clark, J., Berner, C., McCandlish , S., Radford, A., Sutskever, I, Amodei,
+
+28
+Electronic copy available at: https://ssrn.com/abstract=4862121
+
+D. (2020). Language Models are Few-Shot Learners. Working paper, Available at arXiv:
+https://doi.org/10.48550/arXiv.2005.14165.
+Campbell, J. Y., Thompson, S. B. (2008). Predicting the equity premium out of sample: Can
+anything beat the historical average? The Review of Financial Studies, 21 (4), 1509–1531.
+Carhart, M. (1997). On Persistence in Mutual Fund Performance. The Journal of Finance,
+52 (1), 57-82.
+Chen, B., Wu, Z., Zhao, R. (2023). From Fiction to Fact: The Growing Role of Generative AI
+in
+
+Business
+
+and
+
+Finance.
+
+Working
+
+Paper,
+
+Available
+
+at
+
+SSRN:
+
+http://dx.doi.org/10.2139/ssrn.4528225.
+Clark, T. E., West, K. D. (2007). Approximately normal tests for equal predictive accuracy
+in nested models. Journal of Econometrics, 138 (1), 291–311.
+Cornaggia, J., Li, J. Y. (2019). The value of access to finance: Evidence from M&As. Journal
+of Financial Economics, 131 (1), 232-250.
+Daley, B., Geelen, T., Green, B. (2024). Due Diligence. Journal of Finance, Forthcoming.
+Working paper, Available at SSRN: https://ssrn.com/abstract=3702560.
+Dittmar, A.K., Dittmar, R.F (2008). The timing of financing decisions: An examination of
+the correlation in financing waves. Journal of Financial Economics, vol 90 (1), 59–83.
+Dong, M., Hirshleifer, D., Richardson, S., Teoh, S.H. (2006). Does Investor Misvaluation
+Drive the Takeover Market? Journal of Finance, 61 (2), 725-762.
+Dong, M., Stratopoulos, T.C., Wang, V.X. (2023). A Scoping Review of ChatGPT Research
+in
+
+Accounting
+
+and
+
+Finance.
+
+Working
+
+paper,
+
+Available
+
+at
+
+SSRN:
+
+http://dx.doi.org/10.2139/ssrn.4680203.
+Duchin, R., Schmidt, B. (2013). Riding the merger wave: Uncertainty, reduced monitoring,
+and bad acquisitions. Journal of Financial Economics, 107 (1), 69-88.
+Erel, I., Jan, Y., Minton, B.A., Weisbach, M.S. (2021). Corporate Liquidity, Acquisitions, and
+Macroeconomic Conditions, Journal of Financial and Quantitative Analysis, 56 (2), 443-474.
+
+29
+Electronic copy available at: https://ssrn.com/abstract=4862121
+
+Ferris, S.P., Jayaraman, N., Sabherwal, S. (2013). CEO Overconfidence and International
+Merger and Acquisition Activity. Journal of Financial and Quantitative Analysis, 48 (1), 137–
+164.
+Gao, K.G. (2023). Prompt Engineering for Large Language Models: A brief guide with
+examples
+
+for
+
+non-technical
+
+readers.
+
+Working
+
+paper,
+
+Available
+
+at
+
+SSRN:
+
+http://dx.doi.org/10.2139/ssrn.4504303.
+Gennaioli, N., Ma, Y., Shleifer, A. (2016). Expectations and Investment. NBER
+Macroeconomics Annual, 30 (1), 379 – 431.
+Gulen, H., Ion, M. (2015). Policy Uncertainty and Corporate Investment. The Review of
+Financial Studies, 29 (3), 523-564.
+Harford, J. (2005). What drives merger waves? Journal of Financial Economics, 77 (3), 529560.
+Harvey, D.I., Leybourne, S.J., Newbold, P. (1998). Tests for forecast encompassing. Journal
+of Business & Economic Statistics, 16 (2), 254–259.
+Hansen, A.L., Kazinnik, S. (2023). Can ChatGPT Decipher Fedspeak? Working paper,
+Available at SSRN: http://dx.doi.org/10.2139/ssrn.4399406.
+Hertel, T., Kaya, T., Reichmann, D. (2024). Corporate culture and M&A deals: Using text
+from crowdsourced employer reviews to measure cultural differences. Journal of Banking &
+Finance, 161, 107118.
+Huang, D., Jiang, F., Tu, J., Zhou, G. (2015). Investor sentiment aligned: A powerful predictor
+of stock returns. The Review of Financial Studies, 28 (3), 791–837.
+Humphery-Jenner, M, Liu, Y., Nanda, V., Silveri, S., Sun, M. (2024). Of fogs and bogs: Does
+litigation risk make financial reports less readable? Journal of Banking & Finance, 163,
+107180.
+Jha, M., Qian, J., Weber, M., Yang, B. (2024). ChatGPT and Corporate Policies. Working
+paper, Available at SSRN: http://dx.doi.org/10.2139/ssrn.4521096.
+Jiang, F., Lee, J., Martin, X., Zhou, G. (2019). Manager sentiment and stock returns. Journal
+of Financial Economics, 132 (1), 126-149.
+
+30
+Electronic copy available at: https://ssrn.com/abstract=4862121
+
+Jovanovic, B., Rousseau, P.L. (2002). The Q-Theory of Mergers. American Economic
+Review, 92 (2), 198-204.
+Karapandza, R (2016). Stock returns and future tense language in 10-K reports. Journal of
+Banking & Finance, 71 (C), S.50-61.
+Kim, A. G., Muhn, M., Nikolaev, V. V., (2023). Bloated Disclosures: Can ChatGPT Help
+Investors
+
+Process
+
+Information?
+
+Working
+
+paper,
+
+Available
+
+at
+
+SSRN:
+
+http://dx.doi.org/10.2139/ssrn.4425527.
+Kim, A. G., Muhn, M., Nikolaev, V. V., (2024). Financial Statement Analysis with Large
+Language
+
+Models.
+
+Working
+
+paper,
+
+Available
+
+at
+
+SSRN:
+
+http://dx.doi.org/10.2139/ssrn.4835311.
+Kirtac, K., Germano, G. (2024). Sentiment trading with large language models. Finance
+Research Letters, 62 (B), 105227.
+Ko, H., Lee, J. (2023). Can ChatGPT Improve Investment Decisions? From a portfolio
+management perspective. Finance Research Letters, 64, 105433.
+Lee, J. (2016). Can Investors Detect Managers’ Lack of Spontaneity? Adherence to
+Predetermined Scripts During Earnings Conference Calls. The Accounting Review, 91 (1),
+229–250.
+Li, K., Mai, F., Shen, R., Yang, C., Zhang, T. (2021). Dissecting Corporate Culture Using
+Generative AI – Insights from Analyst Reports. Working paper, Available at SSRN:
+http://dx.doi.org/10.2139/ssrn.4558295.
+Li, Y., Wang, S., Ding, H., Chen, H. (2023). Large Language Models in Finance: A Survey.
+Working Paper, Available at arXiv: https://doi.org/10.48550/arXiv.2311.10723.
+Lopez-Lira, A., Tang, Y. (2023). Can ChatGPT Forecast Stock Price Movements? Return
+Predictability and Large Language Models. Working paper, Available at SSRN:
+http://dx.doi.org/10.2139/ssrn.4412788.
+Loughran, T., McDonald, B. (2011). When Is a Liability Not a Liability? Textual Analysis,
+Dictionaries, and 10‐Ks. The Journal of Finance, 66 (1), 35-65.
+
+31
+Electronic copy available at: https://ssrn.com/abstract=4862121
+
+Loughran, T., McDonald, B. (2016). Textual Analysis in Accounting and Finance: A Survey.
+The Journal of Accounting Research, 54 (4), 1187-1230.
+Loughran, T., McDonald, B. (2024). Measuring Firm Complexity. The Journal of Financial
+and
+
+Quantitative Analysis,
+
+(forthcoming).
+
+Working
+
+paper, Available
+
+at
+
+SSRN:
+
+http://dx.doi.org/10.2139/ssrn.3645372.
+Maksimovic, V., Phillips, G., Yang, L. (2013). Private and Public Merger Waves. The Journal
+of Finance, 68 (5), 2177-2217.
+Martynova, M., Renneboog, L. (2008). A century of corporate takeovers: What have we
+learned and where do we stand? Journal of Banking & Finance, 32 (10), 2148-2177.
+Massoud, N., Song, K., Tran, N. (2024). Lender effects on gains from mergers and
+acquisitions. Journal of Banking & Finance, 163, 107171.
+Matsumoto, D., Pronk, M., Roelofsen, E. (2011). What makes conference calls useful? The
+information content of managers’ presentations and analysts’ discussion sessions. The
+Accounting Review, 86 (4), 1383–1414.
+McGurk, Z., Nowak, A., Hall, J.C. (2020). Stock Returns and Investor Sentiment: Textual
+Analysis and Social Media. Journal of Economics and Finance, 44 (3), 458-485.
+Morellec, E., Zhdanov, A. (2005). The dynamics of mergers and acquisitions. Journal of
+Financial Economics, 77 (3), 649-672.
+Price, M.S., Doran, J.S., Peterson, D.R., Bliss, B.A. (2012). Earnings Conference Calls and
+Stock Returns: The Incremental Informativeness of Textual Tone. Journal of Banking &
+Finance, 36 (4), 992–1011.
+Rane, N., Choudhary, S., Rane, J. (2024). Gemini or ChatGPT? Efficiency, performance, and
+adaptability of cutting-edge generative Artificial Intelligence (AI) in finance and accounting.
+Working paper, Available at SSRN: http://dx.doi.org/10.2139/ssrn.4731283.
+Rau, P.R., Stouraitis, A. (2011). Patterns in the Timing of Corporate Event Waves. The
+Journal of Financial and Quantitative Analysis, 46 (1), 209-246.
+
+32
+Electronic copy available at: https://ssrn.com/abstract=4862121
+
+Reynolds, L., McDonell, K., (2021). Prompt Programming for Large Language Models:
+Beyond
+
+the
+
+Few-Shot
+
+Paradigm.
+
+Working
+
+Paper,
+
+Available
+
+at
+
+arXiv:
+
+https://doi.org/10.48550/arXiv.2102.07350.
+Rhodes-Kropf, M., Viswanathan, S. (2004). Market Valuation and Merger Waves. The
+Journal of Finance, 59 (6), 2685-2718.
+Rhodes-Kropf, M., Robinson, D., Viswanathan, S. (2005). Valuation waves and merger
+activity: The empirical evidence. Journal of Financial Economics, 77 (3), 561-603.
+Shleifer, A., Vishny, R. (2003). Stock market driven acquisitions. Journal of Financial
+Economics, 70 (3), 295-311.
+Sibley, S.E., Wang, Y., Xing, Y., Zhang, X. (2024). The information content of the sentiment
+index. Journal of Banking & Finance, 62 (C), 164-179.
+Stambaugh, R. F., Yu, J., Yuan, Y., (2012). The short of it: Investor sentiment and anomalies.
+Journal of Financial Economics, 104 (2), 288-302.
+Uysal, V.B. (2011). Deviation from the target capital structure and acquisition choices. Journal
+of Financial Economics, 102 (3), 602–620.
+Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A.N., Kaiser, L.,
+Polosukhin, I. (2017). Attention is all you need. Advances in Neural Information Processing
+Systems, 30. Available at arXiv: https://doi.org/10.48550/arXiv.1706.03762.
+White, J., Fu, Q., Hays, S., Sandborn, M., Olea, C., Gilbert, H., Elnashar, A., Spencer-Smith,
+J., Schmidt, D.C. (2024). A Prompt Pattern Catalog to Enhance Prompt Engineering with
+ChatGPT. Working Paper, Available at arXiv: https://doi.org/10.48550/arXiv.2302.11382.
+
+33
+Electronic copy available at: https://ssrn.com/abstract=4862121
+
+A. Appendix
+A.1. M&A keyword list
+For the selection of possibly M&A relevant paragraphs, we have relied on the following key word list. As the
+LLM is asked later on to identify whether the paragraph is actually M&A-related, we deliberately choose a
+comprehensive key word list.
+
+acquire
+acquisition
+add on
+addon
+anti trust review
+antitrust review
+apa
+
+deal
+deconsolidate
+deconsolidation
+disposal
+dispose
+divest
+divestiture
+
+letter of intent
+loi
+m&a
+m & as
+m&a
+majority control
+majority stake
+
+asset purchase
+agreement
+asset swap
+badwill
+bidders
+bolt on
+bolton
+break up
+breakup
+business
+combination
+buy and build
+buy side
+buyside
+carve out
+carveout
+combined business
+combined entity
+consolidate
+consolidation
+
+divestment
+
+merge
+
+regulatory review
+roll up
+rollup
+sale process
+sell side
+sellside
+share purchase
+agreement
+spa
+
+due diligence
+earn out
+earnout
+equity investment
+equity swap
+goodwill
+held for sale
+ifrs 5
+
+merger
+merger control
+minority stake
+non binding bid
+non binding offer
+non core
+nonbinding bid
+nonbinding offer
+
+spin off
+spinoff
+strategic buyer
+strategic investment
+strategic option
+strategic rationale
+synergies
+synergy
+
+indicative offer
+initial public offering
+inorganic
+integration
+interested parties
+ipo
+joint venture
+jv
+
+noncore
+pmi
+portfolio assessment
+portfolio review
+portfolio strategy
+post merger
+postmerger
+private equity
+public to private
+
+takeover
+target company
+target search
+trade sale
+transaction
+tuck in
+tuckin
+up for sale
+
+34
+Electronic copy available at: https://ssrn.com/abstract=4862121
+
+A.2. Example paragraphs
+Examples of paragraphs extracted from conference call transcripts based on the keyword list and the respective answers to the prompt.
+Paragraph
+
+GPT 4.0
+
+„before kirsten tells you more about our financial performance for the quarter, let me
+provide a brief update on our pending acquisition of vmware. we have received legal
+merger clearance in australia, brazil, canada, the european union, israel, south africa,
+taiwan and the united kingdom and foreign investment control clearance in all necessary
+jurisdictions. in the u.s., the hart-scott-rodino premerger waiting periods have expired.
+and there is no legal impediment to closing under u.s. merger regulations.“
+"before i turn the call over to corning, I’d like to discuss the transaction we just
+completed last week. we purchased all the outstanding shares of our largest minority
+partner in indura, which is one of our industrial gas businesses in latin america.
+following this transaction, we now own about 98% of indura. the valuation was agreed to
+at the time of the initial purchase in 2012, and will be a use of cash of $278 million in
+q4."
+"now in terms of our strategy, i think you’ll see us do a lot of development organically,
+and you’ll also see us continue to make acquisitions. and, as you know, recently we"ve
+made acquisitions with xerocole and bloxx, and they are in the enterprise security space.
+also, we’ve done organic development, taking the xerocole capability for carriers and
+now in the process of bringing a product to market for enterprise security. "
+"on the right, policy oriented stocks are shown, decline of jpy1.8b based upon the
+acquisition cost. as you can see, we have been reducing the policy oriented stocks earlier
+than other banks. in comparison to the end of march 2002, it has shrunk to one sixth
+already. and whether to hold or sell will be determined based upon the realizability of
+our medium to long term business prospects as well as risk and return. we would like to
+continue to make efforts to reduce the policy oriented stocks holdings."
+"no, we absolutely believe that every opportunity that we’ve seen over the last five years,
+exists more today than at any other point. as we go into more markets, that gives us the
+scale and infrastructure to continue going into more markets. as we build our
+management teams, our technology platforms, very focused on delivering the fans and
+our clients on a global basis. we just think we’re better at it, and we’re better able to go
+into markets, and either build or acquire additional assets to keep doing exactly what
+we’ve been doing."
+
+GPT 3.5
+
+Yes, 1, No
+
+Yes, 0, No
+
+Yes, 2, No
+
+Human
+Consensus
+Yes, 1, No
+
+Yes, 1, No
+
+Yes, 0, No
+
+Yes, 0, No
+
+Yes, 0, No
+
+Yes, 1, Yes
+
+Yes, 2, Yes
+
+Yes, 1, Yes
+
+Yes, 1, Yes
+
+No, Null, Null
+
+Yes, 1, Yes
+
+No, Null, Null
+
+No, Null, Null
+
+Yes, 1, Yes
+
+Yes, 1, Yes
+
+Yes, 1, Yes
+
+Yes, 1, Yes
+
+35
+Electronic copy available at: https://ssrn.com/abstract=4862121
+
+Gemini
+
+A.3. Testing different LLMs and comparing to human answers
+Panel a): Based on a sample of 100 randomly selected M&A-relevant conference call transcripts, we have tested
+different LLMs and compared their results. They all have been exposed to the same prompt.
+GPT 3.5Perplexity
+GPT 4.0
+GPT 4o
+Gemini
+Claude
+Turbo
+AI
+M&A related
+68
+66
+53
+66
+43
+61
+(% yes answers)
+Average sentiment (conditional
+0.82
+0.95
+0.64
+0.48
+1.26
+1.10
+mean of yes answers)
+Future reference
+45
+43
+26
+25
+29
+33
+(conditional)
+Panel b): In addition, we have collected responses from human M&A experts for the same sample and the same
+prompt. The answers from the human subject matter experts do not deviate from the answers of most of the LLMs.
+Human
+Human
+Human
+Human
+Human
+Expert 1
+Expert 2
+Expert 3
+Expert 4
+Consensus
+M&A related
+65
+68
+60
+62
+65
+(% yes answers)
+Average sentiment (conditional
+0.74
+0.68
+0.74
+0.40
+0.64
+mean of yes answers)
+Future reference
+30
+25
+18
+23
+24
+(conditional)
+Panel c): Analyzing the correlation of the answers to the first question of the prompt (whether a paragraph is
+M&A-related), we find the following correlations (Phi coefficients for correlation of binary variables) between
+the LLMs and human experts:
+
+36
+Electronic copy available at: https://ssrn.com/abstract=4862121
+
+A.4. Word Clouds for Texts with High and Low ChatGPT M&A Sentiment Score
+These charts document the most frequent words associated with conference call texts with high and low ChatGPTbased M&A Sentiment Score. We exclude stop words and words that are time-related such as “year” “quarter”
+etc. as well as metrics such as “million”, “billion”, etc. More frequent words are shown with bigger text fonts.
+Panel (a) Word Cloud associated with high ChatGPT-based M&A Sentiment Score (+2).
+
+Panel (b) Word Cloud associated with low ChatGPT-based M&A Sentiment Score (-2).
+
+37
+Electronic copy available at: https://ssrn.com/abstract=4862121
+
+A.5. Definitions of variables and data
+The following table lists the key variables used in this paper. All M&A and financial data is licensed from
+commercial databases (such as Refinitv/LSEG, S&P Capital IQ, Bloomberg). Data for OECD_BCI, UM_CSI,
+BAKER_WURGLER, and HUANG_ET_AL are available on their respective websites (see URLs in the table
+below).
+
+Variable
+Historical deal volume
+
+Definition
+Number of M&A transactions with a
+deal value of more than $100 million
+USD
+
+Source
+Refinitiv/LSEG
+
+IGR
+
+Yield of global investment grade
+bond index
+
+Bloomberg
+
+VIX
+
+S&P 500 option-implied volatility
+index
+
+S&P Capital IQ
+
+SPIDX
+
+S&P Global 1200 index value
+
+Bloomberg
+
+SPVAL
+
+S&P Global 1200 valuation multiple
+based on enterprise value / forward
+EBITDA
+S&P Global 1200 leverage level
+based on net debt / EBITDA
+
+Bloomberg
+
+OECD (2024), Business confidence
+index (BCI) (indicator). doi:
+10.1787/3092dc4f-en
+University of Michigan Consumer
+Sentiment Index
+
+URL
+(Accessed in February 2024)
+
+BAKER_WURGLER
+
+Index of equity market sentiment
+
+URL
+(Accessed in February 2024)
+
+HUANG_ET_AL
+
+Index of investor sentiment
+
+URL
+(Accessed in February 2024)
+
+SPLEV
+OECD_BCI
+UM_CSI
+
+Bloomberg
+
+URL
+(Accessed in February 2024)
+
+38
+Electronic copy available at: https://ssrn.com/abstract=4862121
+
+Figure 1: Raw M&A sentiment score versus M&A activity
+The solid blue line depicts our raw M&A sentiment score while the solid red line stands for M&A deal activity
+measured through monthly number of M&A deals with a deal value of at least $100 million USD. The dashed
+and dotted lines depict the Baker and Wurgler (2006) investor sentiment index (BAKER_WURGLER), the
+Huang et al. (2015) aligned investor sentiment index (HUANG_ET_AL), the Consumer Sentiment Index from
+the University of Michigan (UM_CSI), and the OECD business confidence index (OECD_BCI). See Section 2.3
+for detailed definitions of the indexes. All the measures are standardized to have zero mean and unit variance.
+The sample period is 2013 to 2023.
+
+39
+Electronic copy available at: https://ssrn.com/abstract=4862121
+
+Figure 2: Correlation matrix: MASS and other indices
+This correlation table shows the Pearson correlation coefficients for our MASS index and several other
+measures of sentiment. By design, the coefficient can range from -1 (indicating perfect negative correlation) to
++1 (indicating perfect positive correlation).
+
+40
+Electronic copy available at: https://ssrn.com/abstract=4862121
+
+Table 1: Summary statistics
+This table reports the summary statistics of the main variables used throughout this paper. We show the means,
+minimums, 25% percentiles, medians, 75% percentiles, maximums, and standard deviations. Our sample period
+2013 to 2023. All variables are measured at monthly frequency.
+
+Variable
+
+Mean
+
+Min
+
+25%perct.
+
+Median
+
+75%perct.
+
+Max
+
+Std.Dev.
+
+Raw sentiment score
+Historical deal volume
+BAKER_WURGLER
+HUANG_ET_AL
+UM_CSI
+OECD_BCI
+IGR
+VIX
+SPIDX
+SPVAL
+SPLEV
+
+0.80
+245.0
+0.14
+-0.12
+84.1
+100.3
+1.87
+18.3
+2438.0
+10.5
+2.12
+
+0.63
+97.0
+-0.37
+-1.04
+50.0
+96.8
+0.82
+9.5
+1710.9
+8.2
+1.12
+
+0.74
+208.0
+-0.19
+-0.52
+72.7
+99.8
+1.34
+13.5
+1926.2
+9.5
+1.80
+
+0.80
+246.0
+-0.05
+-0.22
+88.9
+100.4
+1.65
+16.3
+2332.9
+10.1
+2.12
+
+0.85
+274.0
+0.17
+0.08
+96.0
+101.0
+1.98
+20.6
+2953.4
+11.1
+2.58
+
+1.00
+405.0
+2.08
+1.62
+101.4
+102.1
+4.35
+53.5
+3545.7
+14.7
+3.07
+
+0.08
+54.1
+0.54
+0.55
+13.7
+1.0
+0.85
+7.0
+542.2
+1.4
+0.52
+
+41
+Electronic copy available at: https://ssrn.com/abstract=4862121
+
+Table 2: M&A activity vs. lagged sentiment score
+This table reports the results of several OLS regressions with the following equations:
+𝑦𝑡 = 𝛼 + 𝛽𝑅𝑆𝑡−𝐿𝑎𝑔 + 𝜀𝑡 , for all lags in the table below separately.
+Where 𝑅𝑆𝑡−𝐿𝑎𝑔 is the raw sentiment score in period t-Lag and 𝑦𝑡 is the number of M&A transactions larger than
+$100 million USD in period t. The regression coefficient, its corresponding t-statistic and adjusted R2 are
+reported. We used heteroskedasticity-robust standard errors and the null hypothesis 𝐻0 : 𝛽 = 0 . The sample
+period is 2013 to 2023. No of observations: 100; Notes: * Significant at p< 0.1; ** Significant at p< 0.05; ***
+Significant at p< 0.01.
+
+Lag
+β
+t-stat 𝐀𝐝𝐣. 𝑹𝟐
+1 month
+89.04
+1.39
+0.9%
+3 months
+58.57
+0.80
+-0.1%
+6 months
+-110.66
+-1.50
+1.5%
+9 months
+-147.70** -2.55
+3.3%
+12 months -173.10*** -2.73
+4.8%
+18 months -232.75*** -3.50
+9.1%
+24 months -132.09*
+-1.89
+2.0%
+
+42
+Electronic copy available at: https://ssrn.com/abstract=4862121
+
+Table 3: M&A activity vs. difference in sentiment score
+This table reports the results of several OLS regressions with the following equations:
+𝑦𝑡 = 𝛼 + 𝛽(𝑅𝑆𝑡 − 𝑅𝑆𝑡−𝐿𝑎𝑔 ) + 𝜀𝑡 , for all lags in the table below separately.
+Where 𝑅𝑆𝑡 and 𝑅𝑆𝑡−𝐿𝑎𝑔 are the raw sentiment scores in period t and t-Lag, respectively, and 𝑦𝑡 is the number of
+M&A transactions larger than $100 million USD in period t. The regression coefficient, its corresponding tstatistic and adjusted R2 are reported. We used heteroskedasticity-robust standard errors and the null hypothesis
+𝐻0 : 𝛽 = 0. The sample period is 2013 to 2023. No of observations: 100; Notes: * Significant at p< 0.1; **
+Significant at p< 0.05; *** Significant at p< 0.01.
+
+Lag
+1 month
+3 months
+6 months
+9 months
+12 months
+18 months
+24 months
+
+β
+-77.1
+-12.3
+73.9
+133.9**
+156.2**
+138.6**
+111.6*
+
+t-stat
+-0.84
+-0.19
+1.21
+1.99
+2.15
+2.44
+1.94
+
+𝐀𝐝𝐣. 𝐑𝟐
+0.1%
+0.8%
+1.2%
+3.8%
+5.1%
+6.2%
+2.8%
+
+43
+Electronic copy available at: https://ssrn.com/abstract=4862121
+
+Table 4: M&A activity vs. quintiles of sentiment score
+This table reports the results of a multivariate OLS regression with the following equation:
+𝑦𝑡 = 𝛼 + 𝛽2 𝑄2 + 𝛽3 𝑄3 + 𝛽4 𝑄4 + 𝛽5 𝑄5 + 𝜀𝑡
+Where 𝑄𝑖 is a dummy variable indicating whether the 18 months lagged value of the raw sentiment is in the i-th
+quintile. The first quintile is captured by the constant. 𝑦𝑡 is the number of M&A transactions larger than $100
+million USD in period t. The regression coefficient, its corresponding t-statistic and adjusted R2 are reported. We
+used heteroskedasticity-robust standard errors and the null hypothesis 𝐻0 : 𝛽 = 0. The sample period is 2013 to
+2023. Observations: 106; Notes: *** Significant at p< 0.01; Sentiment lagged 18 months. Adj. R2: 10.2%.
+
+Variable
+
+β
+
+Std. Error
+
+t-stat
+
+Significance
+
+Constant
+Quintile 2
+Quintile 3
+Quintile 4
+Quintile 5
+
+248.22
+13.63
+7.68
+4.01
+-44.51
+
+6.16
+12.39
+13.93
+13.64
+14.98
+
+40.31
+1.10
+0.55
+0.29
+-2.97
+
+***
+
+***
+
+44
+Electronic copy available at: https://ssrn.com/abstract=4862121
+
+Table 5: Combination of lag and difference in sentiment score
+This table reports the results of a multivariate OLS regression with the following equation:
+𝑦𝑡 = 𝛼 + 𝛽1 𝑅𝑆𝑡−18 + 𝛽2 (𝑅𝑆𝑡 − 𝑅𝑆𝑡−18 ) + 𝜀𝑡
+Where 𝑅𝑆𝑡 and 𝑅𝑆𝑡−18 are the raw sentiment scores in period t and t-18, respectively, and 𝑦𝑡 is the number of
+M&A transactions larger than $100 million USD in period t. The regression coefficient, its corresponding
+standard error and t-statistic are reported. We used heteroskedasticity-robust standard errors and the null
+hypothesis 𝐻0 : 𝛽 = 0. The sample period is 2013 to 2023. Observations: 106; Notes: *Significant at p<0.1; ***
+Significant at p< 0.01. Adj. R2: 8.6%.
+
+Constant
+Sentiment lagged 18 months
+Sentiment difference 18 months
+
+β
+
+Std. Error
+
+t-stat
+
+Significance
+
+391.85
+-185.69
+48.41
+
+74.87
+93.74
+78.80
+
+5.23
+-1.98
+0.61
+
+***
+*
+
+45
+Electronic copy available at: https://ssrn.com/abstract=4862121
+
+Table 6: Incremental explanatory power of MASS score vs indices
+This table reports the results of several multivariate OLS regressions with the following equations:
+𝑦𝑡 = 𝛼 + 𝛽1 𝑀𝐴𝑆𝑆𝑡 + 𝛽2 𝑋𝑡 + 𝜀𝑡
+Where 𝑀𝐴𝑆𝑆𝑡 is our M&A sentiment score as defined previously and 𝑋𝑡 is another sentiment variable in period
+t which varies across columns (1) to (4). In column (5), all other sentiment variables are used for 𝑋𝑡 . 𝑦𝑡 is the
+number of M&A transactions larger than $100 million USD in period t. The regression coefficient and its
+corresponding t-statistic are reported. We used heteroskedasticity-robust standard errors and the null hypothesis
+𝐻0 : 𝛽 = 0. The sample period is 2013 to 2023. No of observations: 106; Notes: * Significant at p< 0.1; **
+Significant at p< 0.05; *** Significant at p< 0.01.
+
+(1)
+
+(2)
+
+(3)
+
+(4)
+
+(5)
+
+MASS
+
+-172.0**
+(-2.36)
+
+-221.07***
+(-2.99)
+
+-219.85***
+(-3.35)
+
+-112.15**
+(-2.15)
+
+-110.58*
+(-1.89)
+
+BAKER_WURGLER
+
+-26.50***
+(-2.99)
+
+-31.83*
+(-1.84)
+-7.45
+(-0.63)
+
+HUANG_ET_AL
+
+52.49***
+(3.13)
+1.02**
+(2.07)
+
+UM_CSI
+OECD_BCI
+𝐀𝐝𝐣. 𝑹𝟐
+
+13.7%
+
+8.7%
+
+12.3%
+
+1.92***
+(3.49)
+-34.97***
+(-8.14)
+
+-31.06***
+(-7.19)
+
+44.1%
+
+49.8%
+
+46
+Electronic copy available at: https://ssrn.com/abstract=4862121
+
+Table 7: Fundamental factors that influence M&A activity
+This table reports the results of several multivariate OLS regressions with the following equations:
+𝑦𝑡 = 𝛼 + 𝛽1 𝑀𝐴𝑆𝑆𝑡 + 𝛽2 𝐹𝑡 + 𝜀𝑡
+Where 𝑀𝐴𝑆𝑆𝑡 is our M&A sentiment score as defined previously and 𝐹𝑡 is a fundamental factor in period t which
+varies across columns (1) to (12). 𝑦𝑡 is the number of M&A transactions larger than $100 million USD in period
+t. The regression coefficient and its corresponding t-statistic are reported. We used heteroskedasticity-robust
+standard errors and the null hypothesis 𝐻0 : 𝛽 = 0. The sample period is 2013 to 2023. No of observations: 106;
+Notes: * Significant at p< 0.1; ** Significant at p< 0.05; *** Significant at p< 0.01.
+
+(1)
+MASS
+IGR
+VIX
+SPIDX
+
+(2)
+
+(3)
+
+-162.86
+(-2.36)
+-27.42 -24.15
+(-5.23) (-4.4)
+
+(4)
+
+(5)
+
+-197.80
+(-2.86)
+
+(6)
+-284.01
+(-3.15)
+
+(7)
+
+(8)
+
+(9)
+
+-284.74
+(-3.85)
+
+(10)
+
+(11)
+
+-196.18
+(-2.37)
+
+(12)
+-90.93
+(-1.81)
+
+-1.76 -1.15
+(-2.58) (-1.85)
+0.00 0.02
+(0.03) (1.22)
+
+SPVAL
+
+3.07 9.78
+(0.90) (1.85)
+
+SPLEV
+
+20.87 15.90
+(2.24) (1.19)
+
+OECD
+36.26 34.08
+_BCI
+(9.55) (9.44)
+𝐀𝐝𝐣. 𝑹𝟐 18.3% 23.0% 5.2% 10.3% 0.0% 10.6% 0.7% 13.2% 4.0% 9.7% 42.8% 46.3%
+
+47
+Electronic copy available at: https://ssrn.com/abstract=4862121
+
+Table 8: FORECAST ENCOMPASSING TEST
+This table presents the p-values for the Harvey et al. (1998) statistic applied to our MASS and the other sentiment
+indexes. The statistic pertains to a one-sided test of the null hypothesis, which assumes that the predictive
+regression forecast for the monthly M&A volume, based on the predictor listed in the first column, encompasses
+the forecast based on the predictor listed in the first row. The alternative hypothesis suggests that the forecast
+from the first column predictor does not encompass the forecast from the first-row predictor. The predictors used
+in this analysis are MASS, BAKER_WURGLER, HUANG_ET_AL, UM_CSI and OECD_BCI. The sample
+period covers 2013 to 2023.
+
+MASS
+MASS
+BAKER_WURGLER
+HUANG_ET_AL
+UM_CSI
+OECD_BCI
+
+0.11
+0.00
+0.07
+0.39
+
+BAKER_
+WURGLER
+0.01
+0.02
+0.00
+0.07
+
+HUANG_ET_AL
+
+UM_CSI
+
+OECD_BCI
+
+0.98
+1.00
+
+0.23
+0.44
+0.00
+
+0.00
+0.00
+0.00
+0.00
+
+0.99
+0.95
+
+0.34
+
+48
+Electronic copy available at: https://ssrn.com/abstract=4862121
+
+Table 9: OUT-OF-SAMPLE FORECASTING
+This table presents the out-of-sample performance in predicting the monthly M&A volume using MASS,
+BAKER_WURGLER, HUANG_ET_AL, UM_CSI and OECD_BCI. The two additional variables
+EW_MASS_BCI and FREE_MASS_BCI denote the equally weighted and period-specific optimized,
+respectively, averages of MASS and OECD_BCI. All out-of-sample forecasts are estimated recursively with data
+available at the forecast formation time. R2OS is the out-of-sample R2 measure from Campbell and Thompson
+(2008), indicating the reduction in mean squared forecast error (MSFE) for the competing predictive regression
+forecast compared to the historical average benchmark forecast. Adj. MSFE is the MSFE-adjusted statistic from
+Clark and West (2007), used to test the null hypothesis that the historical average forecast MSFE is less than or
+equal to the competing predictive regression forecast MSFE, against the one-sided (upper-tail) alternative
+hypothesis. The sample period covers 2013 to 2023.
+
+MASS
+BAKER_WURGLER
+HUANG_ET_AL
+UM_CSI
+OECD_BCI
+EW_MASS_BCI
+FREE_MASS_BCI
+
+R2OS
+
+Adj. MSFE
+
+p-value adj. MSFE
+
+9.4%
+4.4%
+-6.5%
+3.2%
+49.1%
+50.5%
+49.6%
+
+1.97
+2.61
+1.64
+1.54
+5.41
+5.48
+5.23
+
+0.024
+0.004
+0.050
+0.061
+0.000
+0.000
+0.000
+
+49
+Electronic copy available at: https://ssrn.com/abstract=4862121
+
+TRR 266 Accounting for Transparency
+Contact:
+Prof. Dr. Dr. h.c. Dr. h.c. Caren Sureth-Sloane
+Paderborn University
+Faculty of Business Administration and Economics
+Department of Taxation, Accounting and Finance
+Warburger Str. 100, 33098 Paderborn, Germany
+trr266@mail.upb.de
+www.accounting-for-transparency.de
+Electronic copy available at: https://ssrn.com/abstract=4862121
+
+

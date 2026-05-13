@@ -1,6 +1,10 @@
 {
   "permissions": {
     "allow": [
+      "Bash(pdftotext \"/Users/timowagner/Projects/ai-impact-ma/research/input/seminar/20260430_Einführung Wissenschaftliches Arbeiten_SS2026 Kopie.pdf\" \"/Users/timowagner/Projects/ai-impact-ma/research/input/seminar/einfuehrung-wiss-arbeiten.txt\")",
+      "WebSearch",
+      "WebFetch",
+      "mcp__claude_ai_Notion__notion-search"
     ]
   }
 }

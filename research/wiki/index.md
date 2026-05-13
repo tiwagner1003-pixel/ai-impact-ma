@@ -5,15 +5,267 @@ summary under the right group. Keep entries alphabetical within each group.
 
 ## Sources
 
-_No sources ingested yet. Drop a file under `research/input/` or give a URL
-to the `wiki-ingest` agent._
+- [[2026-05-05-akerlof-1970-market-for-lemons]] — Akerlof (1970, QJE): foundational article on quality uncertainty and adverse selection, used as the theoretical basis for information asymmetry in the M&A Grundlagenteil.
+- [[2026-05-03-bachelorseminar-ma-ss2026-intro]] — Goethe-Universitat Frankfurt Bachelor seminar SS 2026 kick-off slides: deadlines, grading rules, 8 paper topics, and the M&A framework positioning AI (Thema 7) as a cross-cutting topic.
+- [[2026-05-03-bachelorseminar-ma-ss2026-syllabus]] — Full syllabus with per-topic reading lists for all 8 seminar themes, including the four prescribed readings for Thema 7 ("Der Einfluss von KI auf M&A") and submission requirements.
+- [[2026-05-07-bhagwan-et-al-2018-systematic-review-dd-ma]] — Bhagwan, Grobbelaar & Bam (2018, SAJIE): systematic literature review of the M&A due diligence stage; maps DD areas, objectives, cost/time constraints, and research gaps in prioritisation, depth, and outcome quality.
+- [[2026-05-07-johnson-pasquale-chapman-2019-ai-ml-bias-finance]] — Johnson, Pasquale & Chapman (Fordham L. Rev. 2019): legal-policy essay arguing algorithmic bias in fintech credit markets is structurally produced by biased training data and proxy variables; OCC's Fintech Charter Decision removes the main consumer-protection safeguards; coordinated regulation requiring algorithmic explainability is the only credible remedy.
+- [[2026-05-07-dwivedi-kamps-2025-icl-due-diligence]] — Dwivedi & Kamps (2025, IRRJ): reproducibility study replicating Roegiest et al. (2018) CRF baseline and showing few-shot LLMs (Gemma2, Llama3.1, Dolphin-Llama3) achieve acceptable recall across all 50 KIRA DD topics without labeled training data.
+- [[2026-05-07-hendrycks-et-al-2021-cuad-contract-review]] — Hendrycks, Burns, Chen & Ball (2021, NeurIPS): introduces CUAD, a 500+ contract, 13k+ annotation legal contract review benchmark; shows measurable but still limited transformer performance for due diligence clause extraction.
+- [[2026-05-07-puranam-et-al-2006-dd-signal-detection]] — Puranam, Powell & Singh (2006, Strategic Organization): models due diligence failure as a signal-detection problem; negative information is noisy, and DD quality depends on interpretation and action, not discovery alone.
+- [[2026-05-07-sele-chugunova-2024-human-in-loop-adm]] — Sele & Chugunova (2024, PLOS ONE): experiment showing human-in-the-loop design can increase algorithm uptake while reducing accuracy when humans fail to correct poor recommendations.
+- [[2026-05-06-wang-et-al-2023-maud-merger-agreement-understanding]] — Wang et al. (EMNLP 2023): introduces MAUD, an expert-annotated merger-agreement understanding benchmark with 39,000+ examples and 47,457 annotations; transformer baselines assist legal review but remain imperfect, especially on long and complex M&A clauses.
+- [[2026-05-03-degen-et-al-2024-llms-ma-forecasting]] — Degen, Kengelbach, Kim, Sievers & Wang (2024): constructs MASS, a ChatGPT-derived M&A Sentiment Score, and shows it predicts aggregate M&A deal volume 18 months ahead with incremental power beyond fundamentals. (TRR 266 WP No. 150, SSRN 4862121)
+- [[2026-05-03-einfuehrung-wiss-arbeiten]] — Chair's binding academic-writing guide (SS 2026): scientific method, literature research, Harvard citation style, paper structure, formatting rules, AI documentation requirements, and grading criteria.
+- [[2026-05-03-zhang-et-al-2024-ai-ma-target-selection]] — Zhang, Pu, Zheng & Li (2024, WJIMT): hybrid ML model (LightGBM + SVM + MLP) trained on 10,000 M&A deals achieves AUC-ROC 0.937 predicting synergy success, outperforming DCF, CCA, and expert judgment; top predictors are Revenue Growth Rate, Market Cap/EBITDA, and Debt-to-Equity Ratio.
+- [[2026-05-04-arrieta-et-al-2020-xai-concepts-taxonomies]] — Arrieta, Díaz-Rodríguez, Del Ser et al. (2020, Information Fusion): landmark XAI survey (6,000+ citations) providing a dual taxonomy of transparent vs. post-hoc explainability methods, a five-audience framework for XAI, and the "Responsible AI" framework requiring fairness, explainability, and accountability for large-scale AI deployment.
+- [[2026-05-04-jang-stikkel-2024-nlp-llms-due-diligence]] — Jang & Stikkel (NAACL 2024, Oxford/Clifford Chance): first study applying PLMs and LLMs to M&A due diligence; finds hierarchical sentence extraction is the best architecture for the long-document, label-scarce DD problem, LegalBERT does not beat BERT, and GPT-4 (few-shot) achieves F1 0.82 / recall 0.96 as a practical lawyer-assisting tool.
+- [[2026-05-04-lopez-lira-et-al-2025-memorization-problem-llms]] — Lopez-Lira, Tang & Zhu (2025, arXiv 2504.14765): proves LLM economic forecasting on pre-cutoff data is fundamentally non-identified (memorization and genuine skill are observationally equivalent); empirically documents GPT-4o's near-perfect recall of macroeconomic indicators, stock indices, and individual prices pre-cutoff vs. near-random post-cutoff accuracy; directly challenges the validity of Degen et al. (2024) MASS study.
+- [[2026-05-04-bain-2024-genai-ma-hope-meets-hype]] — Siegal & Houston (Bain & Company, January 2024): survey of 300+ M&A practitioners finds 16% current GenAI adoption, 80% expected within three years, 85% satisfaction among early adopters; documents usage by deal phase, top benefits, and top risks; provides three-question strategic framework for getting started.
+- [[2026-05-07-bergh-et-al-2019-information-asymmetry-management-research]] — Bergh, Ketchen, Orlandi, Heugens & Boyd (JOM 2019): systematic review of 223 management articles providing the canonical five-conceptualization, three-antecedent, four-theoretical-role, and eight-resolution framework for information asymmetry; foundational theoretical source for the Thema 7 seminar paper.
+- [[2026-05-04-bozman-et-al-2026-ai-deal-screening]] — Bozman, Fairhurst & Greene (SSRN 2026, working paper): first out-of-sample empirical study of ML and LLM deal screening for M&A; ML models improve average acquirer announcement returns and identify large-loss deals; effectiveness is higher for weak-governance firms and lower for complex deals; fine-tuned LLMs partially close the performance gap with ML.
+- [[2026-05-05-graebner-et-al-2017-post-merger-integration-review]] — Graebner, Heimeriks, Huy & Vaara (2017, Academy of Management Annals): review of PMI research organized around strategic integration, sociocultural integration, and experience/learning; emphasizes process dynamics.
+- [[2026-05-05-haleblian-et-al-2009-ma-review]] — Haleblian, Devers, McNamara, Carpenter & Davison (2009, Journal of Management): broad M&A review and research agenda integrating acquisition findings across disciplines.
+- [[2026-05-07-howson-2003-due-diligence-critical-stage]] — Howson (Gower 2003 / Routledge 2017): standard practitioner reference for the classical DD process; defines the five-strand programme model and 15 DD areas across 13 discipline-specific chapters; argues DD must be project-managed with adviser coordination and post-acquisition planning as core quality controls; full OCR content now ingested.
+- [[2026-05-07-lajoux-2024-art-of-ma-sixth-edition-ch1-ch6]] — Lajoux (McGraw-Hill Education 2024): sixth and final edition of the Art of M&A; Chapter 1 establishes the eight-phase circular M&A lifecycle; Chapter 6 provides the fullest practitioner treatment of the classical due diligence inquiry including legal foundations (Securities Act 1933), VDR infrastructure, cybersecurity DD, cultural DD, red flags, and post-closing obligations; primary Lajoux reference superseding the 2019 preview.
+- [[2026-05-05-king-et-al-2004-post-acquisition-performance-meta-analysis]] — King, Dalton, Daily & Covin (2004, Strategic Management Journal): meta-analysis showing acquisitions do not improve acquirer performance on average and that unidentified moderators remain important.
+- [[2026-05-05-li-et-al-2021-corporate-culture-ml]] — Li, Mai, Shen & Yan (2021, Review of Financial Studies): uses word embeddings and earnings-call transcripts to measure corporate culture and link it to firm outcomes, including deal making.
+- [[2026-05-05-myers-majluf-1984-corporate-financing-investment-decisions]] — Myers & Majluf (1984, Journal of Financial Economics): classic corporate-finance model showing how managerial private information affects financing and investment decisions.
+- [[2026-05-05-zhao-et-al-2023-survey-large-language-models]] — Zhao, Zhou, Li, Tang et al. (Renmin University of China, arXiv:2303.18223v13, 2023): landmark LLM survey (~15,000+ citations) providing the canonical four-generation LM taxonomy (Statistical → Neural → PLM → LLM), definitions of emergent abilities, KM and Chinchilla scaling laws, and the pre-training + adaptation tuning + prompting paradigm; arXiv preprint, not peer-reviewed.
+- [[2026-05-04-brede-et-al-2025-cultural-distance-ma-glassdoor]] — Brede, Gerstel, Wöhrmann & Bausch (Review of Managerial Science, 2025): applies Culture-BERT to ~400,000 Glassdoor reviews across 243 M&A deals (2008–2021) to show that organizational cultural distance negatively predicts CARs, post-merger synergies, and post-deal innovativeness, while positively predicting acquisition premiums; cultural friction dominates cultural learning.
+- [[2026-05-04-herbosch-mertens-2025-risk-allocation-ai-ma]] — Herbosch & Mertens (SSRN 2025, working paper): five-jurisdiction comparative legal analysis (Germany, France, England, Belgium, Delaware) of liability when AI tools err in M&A; argues existing duty-of-care and business judgment rule doctrines already impose governance obligations; residual risk falls on shareholders of acquiring companies.
+- [[2026-05-04-bremen-2024-ai-accelerates-ma]] — Bremen (2024, WTW / Forbes): practitioner article outlining six leadership action areas for AI in M&A; reports 16% current generative AI adoption in M&A (attributed to BCG survey — likely Bain survey; see conflict on [[generative-ai-in-ma]]) with predicted growth to 80% in three years; addresses governance, confidentiality, and job-role shifts.
+- [[2026-05-04-singh-2023-ai-transformative-potential-ma]] — Singh (2023, Jus Corpus Law Journal): legal-practitioner survey of AI's transformative potential across the M&A lifecycle; argues AI improves all three phases (pre-merger, merger, post-merger) while human judgment remains essential in negotiations and cultural integration.
+- [[2026-05-04-zhang-et-al-2025-digital-transformation-ma-information-asymmetry]] — Zhang, Yue, Tao & Lai (2025, Economic Analysis and Policy): panel study of Chinese A-share firms (2008–2022, N=22,274) showing digital transformation significantly promotes M&A primarily by reducing external information asymmetry between acquirers and targets; dual-mechanism framework (external promotes, internal inhibits M&A); effect stronger for non-high-tech and politically unconnected firms.
 
 ## Entities
 
-_No entities yet. Entities are added automatically by `wiki-ingest` as
-sources are processed._
+- [[academy-of-management-annals]] — Review journal that published Graebner et al. (2017) on post-merger integration.
+- [[bachelorseminar-ma-ss2026]] — Goethe-Universitat Frankfurt Bachelor seminar "M&A: Prozess und organisatorische Integration," SS 2026, run by Prof. Dr. Lars Schweizer.
+- [[alejandro-barredo-arrieta]] — AI researcher at TECNALIA (Spain); lead author of the Arrieta et al. (2020) XAI survey in Information Fusion (6,000+ citations).
+- [[alexandra-reed-lajoux]] — M&A practitioner and author; principal author of *The Art of M&A* (6 editions, 1989–2024), the standard comprehensive Q&A-format M&A lifecycle reference; the 2024 sixth edition is the final volume in the McGraw-Hill series.
+- [[andreas-bausch]] — Professor of Strategic Management at Friedrich Schiller University Jena; senior author of Brede et al. (2025) on organizational cultural distance and M&A outcomes.
+- [[arnt-wohrmann]] — Management researcher at Friedrich Schiller University Jena; co-author of Brede et al. (2025) on cultural distance and M&A.
+- [[adam-bozman]] — Finance researcher at the Carson College of Business, Washington State University; co-author of Bozman et al. (2026) on AI-based M&A deal screening.
+- [[adam-roegiest]] — Lead author of Roegiest, Hudek & McNulty (SIGIR 2018) introducing the KIRA dataset for M&A DD passage retrieval; co-author of Roegiest, Chitta et al. (NLP-Legal 2023) on GPT-3.5 contract QA.
+- [[alejandro-lopez-lira]] — Finance professor at the University of Florida; lead author of Lopez-Lira et al. (2025) formalizing the LLM memorization non-identification problem for economic forecasting.
+- [[bain-and-company]] — Global management consulting firm; publisher of the 2024 M&A Practitioners' Outlook Survey and the "Generative AI in M&A: Where Hope Meets Hype" article.
+- [[cadbury-report]] — The 1992 UK corporate governance code recommending that boards review significant acquisitions against a formal checklist; the closest UK governance equivalent to a DD obligation (soft "comply or explain" standard, not statutory).
+- [[brian-boyd]] — Management professor at City University of Hong Kong; co-author of Bergh et al. (2019) systematic review of information asymmetry in management research.
+- [[capital-expert-services]] — M&A advisory firm listed with Alexandra Reed Lajoux on the sixth edition of *The Art of M&A* (2024).
+- [[bain-ma-practitioners-2024-outlook-survey]] — Bain survey (N≈306 M&A practitioners, early 2024) measuring GenAI adoption rates; primary source for the 16%/80% adoption figures.
+- [[baker-wurgler-sentiment-index]] — Investor sentiment index (Baker & Wurgler 2006) built from six stock-market proxies; benchmark in the MASS study.
+- [[ben-siegal]] — Bain & Company practitioner; co-author of "Generative AI in M&A: Where Hope Meets Hype" (2024).
+- [[boston-consulting-group]] — Global management consulting firm; employer of four of the five Degen et al. (2024) MASS paper authors.
+- [[brooke-houston]] — Bain & Company practitioner; co-author of "Generative AI in M&A: Where Hope Meets Hype" (2024).
+- [[consumer-financial-protection-bureau]] — U.S. federal regulatory agency (Dodd-Frank 2010) enforcing consumer financial protection and antidiscrimination laws; identified by Johnson et al. (2019) as a key institution for establishing minimum ADM transparency and bias-mitigation standards in fintech.
+- [[csmar-database]] — China Stock Market & Accounting Research database; primary data source for Chinese listed-company M&A and digital transformation research, including a dedicated Digital Transformation Research Database.
+- [[david-r-king]] — Lead author of King et al. (2004), the meta-analysis of post-acquisition performance.
+- [[deepseek-r1]] — Open-source reasoning-focused LLM (Guo et al. 2025, 8B variant); evaluated on KIRA DD topics in Dwivedi & Kamps (2025); achieves high recall but tends toward overclassification.
+- [[dolphin-llama3]] — Community fine-tune of Llama 3 8B; achieves highest recall (0.926) of all models tested in Dwivedi & Kamps (2025) at the cost of low precision (0.397).
+- [[chatgpt]] — OpenAI's GPT-based conversational LLM; used via API to score M&A sentiment in the MASS study.
+- [[clemson-university]] — Public research university in Clemson, South Carolina; home of the Wilbur O. and Ann Powers College of Business; institutional affiliation of Daniel Greene (Bozman et al. 2026).
+- [[clifford-chance]] — Magic Circle international law firm; operates a Data Science Lab that co-authored the first PLM/LLM M&A due diligence study (Jang & Stikkel, NAACL 2024).
+- [[culture-bert]] — RoBERTa-based LLM fine-tuned on 2,000 Glassdoor reviews to classify text along the four CVF dimensions (Clan, Adhocracy, Market, Hierarchy); achieves up to 28% higher accuracy than word2vec; used in Brede et al. (2025).
+- [[crunchbase]] — Commercial business and M&A transaction database; primary data source for the Zhang et al. (2024) 10,000-deal ML dataset.
+- [[daniel-greene]] — Finance professor at Clemson University; co-author of Bozman et al. (2026) on AI deal screening; prior work on GPT-4 financial knowledge (Fairhurst & Greene 2025).
+- [[david-ketchen]] — Strategy professor at Auburn University; co-author of Bergh et al. (2019) systematic review of information asymmetry in management research.
+- [[david-shrier]] — Professor and technology/innovation researcher; co-authored an Evercore ISI report concluding AI will partially impact almost every job, shifting roles rather than eliminating them.
+- [[donald-bergh]] — Management professor at the University of Denver; lead author of Bergh et al. (2019), the canonical systematic review of information asymmetry in management research.
+- [[dominik-degen]] — Corresponding author of the 2024 MASS paper; BCG Munich practitioner-researcher.
+- [[douglas-fairhurst]] — Finance professor at Washington State University; co-author of Bozman et al. (2026) on AI deal screening; prior co-author of Fairhurst & Greene (2025) on ChatGPT financial knowledge.
+- [[economic-analysis-and-policy]] — Peer-reviewed Elsevier economics journal (Economic Society of Australia); publication venue for Zhang et al. (2025).
+- [[eu-ai-act]] — EU Regulation (EU) 2024/1689 establishing a risk-based AI governance framework; Articles 13–15 (transparency, human oversight, accuracy) serve as a benchmark for M&A AI governance obligations even for low-risk systems.
+- [[evercore-isi]] — Independent investment banking and equity research firm; co-authored (with Prof. David Shrier) a report on AI's partial impact on jobs, cited in Bremen (2024).
+- [[fordham-law-review]] — Peer-reviewed law journal at Fordham University School of Law; published Johnson, Pasquale & Chapman (2019) on AI, machine learning, and bias in finance.
+- [[frank-pasquale]] — Piper & Marbury Professor of Law at University of Maryland; co-author of Johnson et al. (2019) and author of "The Black Box Society" (2015); scholar of algorithmic opacity in financial services.
+- [[fti-andersch]] — German restructuring and transaction advisory firm; Praxispartner for the SS 2026 M&A seminar Day 1.
+- [[gabor-stikkel]] — Data scientist at Clifford Chance's Data Science Lab; co-author of Jang & Stikkel (NAACL 2024), the first NLP/LLM M&A due diligence study.
+- [[floris-mertens]] — PhD Candidate at Ghent University, Belgium; co-author (with Maarten Herbosch) of the 2025 SSRN working paper on AI risk allocation in M&A transactions.
+- [[ghent-university]] — Major Belgian public research university in Ghent; institutional affiliation of Floris Mertens, co-author of the 2025 AI risk allocation in M&A working paper.
+- [[glassdoor]] — Online employer review platform (founded 2008); primary data source (~400,000 reviews, 437 firms) for the organizational cultural distance measure in Brede et al. (2025).
+- [[gemma2]] — Google's open-source LLM (9B variant, Mesnard et al. 2024); best-performing open-source model in Dwivedi & Kamps (2025) for legal DD passage retrieval with balanced precision/recall and robust prompt sensitivity profile.
+- [[george-akerlof]] — Economist and author of the foundational 1970 "Market for Lemons" article on information asymmetry.
+- [[hannes-gerstel]] — Management researcher at Friedrich Schiller University Jena; co-author of Brede et al. (2025) on cultural distance and M&A.
+- [[ginni-rometty]] — Former CEO of IBM; cited for the view that AI complements rather than replaces human capabilities (WEF panel).
+- [[goethe-universitat-frankfurt]] — German public research university in Frankfurt, host institution of the SS 2026 M&A seminar.
+- [[gpt-4]] — OpenAI's fourth-generation LLM family; GPT-4.0 selected as the primary scoring model in Degen et al. (2024) based on highest human-expert correlation.
+- [[gpt-4o-mini]] — OpenAI's cost-efficient smaller GPT-4o variant; evaluated in Dwivedi & Kamps (2025) for legal DD classification; achieves highest precision (0.936) but lowest recall (0.663) of all models tested.
+- [[haodong-zhang]] — First author of Zhang et al. (2024) ML M&A paper; affiliated with Computer Science, New York University.
+- [[ilaria-orlandi]] — Management researcher; co-author of Bergh et al. (2019) systematic review of information asymmetry in management research.
+- [[information-fusion]] — Peer-reviewed Elsevier journal (ISSN 1566-2535) covering data fusion and ML/AI; publication venue for the Arrieta et al. (2020) XAI survey.
+- [[jim-jeffries]] — Founder of the M&A Leadership Council; foreword author for *The Art of M&A* sixth edition.
+- [[javier-del-ser]] — AI researcher at TECNALIA / UPV/EHU / BCAM (Spain); co-corresponding author of the Arrieta et al. (2020) XAI survey.
+- [[jennifer-chapman]] — Ryan H. Easley Research Fellow at University of Maryland (2019); third co-author of Johnson, Pasquale & Chapman (2019) on AI and bias in finance.
+- [[jens-kengelbach]] — BCG partner and co-author of the MASS paper; contributed M&A practitioner expertise and BCG expert network access.
+- [[jerayr-haleblian]] — Lead author of Haleblian et al. (2009), a broad M&A review and research agenda.
+- [[jiayi-tao]] — Researcher at Southeast University (School of Economics and Management, Nanjing); co-author of Zhang et al. (2025) on digital transformation and M&A.
+- [[john-m-bremen]] — Senior Managing Director and Chief Innovation and Acceleration Officer at WTW; author of the prescribed Thema 7 practitioner article "AI accelerates M&A into the future" (2024).
+- [[journal-of-financial-economics]] — Finance journal that published Myers & Majluf (1984), a core corporate-finance information-asymmetry source.
+- [[journal-of-management]] — Peer-reviewed management journal that published Haleblian et al. (2009) and Bergh et al. (2019); one of the six leading outlets surveyed in the information-asymmetry systematic review.
+- [[jus-corpus-law-journal]] — Indian open-access law journal (ISSN 2582-7820); publication venue for Singh (2023).
+- [[kavya-sanjay-singh]] — Legal scholar at National Law University, Delhi; author of the 2023 AI-in-M&A survey paper prescribed for Thema 7.
+- [[kai-li]] — Finance scholar and lead author of Li et al. (2021) on machine-learning-based corporate culture measurement.
+- [[kristin-johnson]] — McGlinchey Stafford Professor of Law at Tulane University Law School; lead author of Johnson, Pasquale & Chapman (2019) on AI, machine learning, and bias in finance.
+- [[kira-dataset]] — The only publicly available M&A due diligence dataset (Roegiest et al. 2018, SIGIR); 50 legal contract topics, avg. 3,308 sentences and 4.8 relevant labels per document; access restricted to academics.
+- [[kpmg]] — Global professional services firm; authored a 1999 study on acquisition success factors (83% correlation between integration success and deal success; synergy evaluation as top hard key) cited in Howson (2003).
+- [[ku-leuven]] — Major Belgian research university in Leuven (Katholieke Universiteit Leuven); institutional affiliation of Maarten Herbosch, co-author of the 2025 AI risk allocation in M&A working paper.
+- [[lars-schweizer]] — Professor at Goethe-Universitat Frankfurt leading the SS 2026 M&A Bachelor seminar; published on synergy identification and PMI.
+- [[legalbert]] — Legal-domain BERT model (Chalkidis et al. 2020); does not reliably outperform general BERT on M&A due diligence classification per Jang & Stikkel (2024).
+- [[llama3-1]] — Meta's open-source Llama 3.1 family (8B variant); evaluated in Dwivedi & Kamps (2025) for legal DD retrieval; achieves F1 0.802 and recall 0.818 in the few-shot setting.
+- [[lightgbm]] — Microsoft's open-source gradient boosting library; gradient boosting component of the Zhang et al. (2024) hybrid M&A prediction model.
+- [[lin-li]] — Fourth author of Zhang et al. (2024) ML M&A paper; affiliated with Electrical and Computer Engineering, Carnegie Mellon University.
+- [[ma-leadership-council]] — M&A practitioner organization founded by Jim Jeffries; relevant here only via the Lajoux sixth-edition foreword.
+- [[maarten-herbosch]] — Assistant Professor of AI and Law at KU Leuven, Faculty of Law and Criminology; lead author of the 2025 SSRN working paper on AI risk allocation in M&A; prior monograph "Intelligent Contracteren" (Kluwer, 2023).
+- [[marco-hochhaus]] — Academic staff at Goethe-Universitat Frankfurt chair for Strategisches Management; author of the SS 2026 academic-writing introduction for the M&A seminar.
+- [[marius-brede]] — Management researcher at Friedrich Schiller University Jena; lead author of Brede et al. (2025) on organizational cultural distance and M&A outcomes using Culture-BERT on Glassdoor data.
+- [[maud-dataset]] — Expert-annotated legal NLP benchmark for reading comprehension over public merger agreements.
+- [[mcgraw-hill]] — Major American educational and professional publisher; publisher of Lajoux (2024) *The Art of M&A*, 6th edn.
+- [[melissa-graebner]] — Co-author of Graebner et al. (2017), a major review on the process of post-merger integration.
+- [[mingyin-zhu]] — Researcher at the University of Florida (Warrington College of Business); corresponding author of Lopez-Lira et al. (2025) on the LLM memorization problem.
+- [[myeongjun-erik-jang]] — NLP researcher at the Department of Computer Science, University of Oxford; first author of Jang & Stikkel (NAACL 2024) on PLMs and LLMs for M&A due diligence.
+- [[national-law-university-delhi]] — Public law university in Delhi, India; institutional affiliation of Kavya Sanjay Singh.
+- [[nicholas-majluf]] — Corporate-finance scholar and co-author of Myers & Majluf (1984).
+- [[natalia-diaz-rodriguez]] — AI researcher at ENSTA/INRIA Flowers Team (France); second author of the Arrieta et al. (2020) XAI survey.
+- [[new-york-dfs]] — New York State Department of Financial Services; challenged the OCC's Fintech Charter Decision in federal court; model for nimble state-level consumer-protection enforcement in the algorithmic age per Johnson et al. (2019).
+- [[mass-index]] — M&A Sentiment Score (MASS): a monthly aggregate index of corporate M&A sentiment derived from ChatGPT scoring of earnings call transcripts; developed by Degen et al. (2024).
+- [[oecd-business-confidence-index]] — OECD indicator of industrial business expectations; the single strongest predictor of M&A deal volume in the MASS study (out-of-sample R2 = 49.1%).
+- [[paderborn-university]] — German university in Paderborn; home institution of Soenke Sievers and TRR 266 contact institution.
+- [[pursey-heugens]] — Strategy and organization professor at Erasmus University Rotterdam; co-author of Bergh et al. (2019) systematic review of information asymmetry in management research.
+- [[peter-howson]] — M&A and commercial DD practitioner; director at AMR International; author of the standard classical DD reference textbook (Gower 2003).
+- [[gower-publishing]] — UK professional publisher (now a Routledge imprint); original publisher of Howson's DD textbook in 2003.
+- [[routledge]] — Major academic publisher (Taylor & Francis Group imprint); reprint publisher of Howson's DD textbook in 2017.
+- [[amr-international]] — London-based independent commercial due diligence specialist; employer of Peter Howson.
+- [[office-of-the-comptroller-of-the-currency]] — U.S. federal banking regulator that issued the 2018 Fintech Charter Decision allowing nondepository fintech firms to apply for SPNB charters, preempting state consumer-protection laws per Johnson et al. (2019).
+- [[ollama]] — Open-source local LLM runner enabling privacy-preserving inference of open-source models; used in Dwivedi & Kamps (2025) to run Dolphin-Llama3, Llama3.1, Gemma2, and DeepSeek-R1 locally.
+- [[review-of-managerial-science]] — Peer-reviewed Springer management journal covering all management disciplines; publication venue for Brede et al. (2025) on cultural distance and M&A.
+- [[review-of-financial-studies]] — Finance journal that published Li et al. (2021) on machine-learning-based corporate culture measurement.
+- [[shuaiqi-zheng]] — Third author of Zhang et al. (2024) ML M&A paper; affiliated with Data Analytics, Illinois Institute of Technology.
+- [[satya-nadella]] — CEO of Microsoft; cited for the view that AI complements rather than replaces human capabilities (WEF panel).
+- [[sdc-securities-data-company]] — M&A transaction database referenced as a deal-data source in Brede et al. (2025).
+- [[support-vector-machine]] — Supervised ML classifier used as one component in Zhang et al.'s (2024) hybrid M&A target-selection and synergy-prediction model.
+- [[shujing-yue]] — Corresponding author of Zhang et al. (2025); researcher at the School of Economics and Management and Institute of Digital Economy and Technological Innovation, Southeast University, Nanjing.
+- [[southeast-university]] — Public research university in Nanjing, China (SEU); primary institutional affiliation of Zhang, Yue, and Tao (Zhang et al. 2025).
+- [[sp-global]] — Financial information provider referenced as Capital IQ data source for market and company data.
+- [[soenke-sievers]] — Finance professor at Paderborn University; the sole academic co-author on the MASS paper; DFG/TRR 266 grantee.
+- [[stewart-myers]] — Corporate-finance scholar and co-author of Myers & Majluf (1984).
+- [[strategic-management-journal]] — Management journal that published King et al. (2004) on post-acquisition performance.
+- [[steven-wang]] — First author of Wang et al. (2023), the EMNLP paper introducing the MAUD merger-agreement understanding dataset.
+- [[steven-rosenberg]] — WTW employee credited as collaborator on Bremen's 2024 AI M&A article; further role details unknown.
+- [[sp-global-1200]] — Global large-cap equity index of ~1,200 companies; company universe used for transcript collection in the MASS study.
+- [[the-atticus-project]] — Non-profit legal organization behind the MAUD expert-annotated merger-agreement dataset.
+- [[university-of-florida]] — Public research university in Gainesville, Florida (Warrington College of Business); institutional affiliation of Lopez-Lira, Tang & Zhu (2025).
+- [[washington-state-university]] — Public research university in Pullman, Washington; Carson College of Business is institutional home of Bozman and Fairhurst (Bozman et al. 2026).
+- [[wayne-xin-zhao]] — NLP researcher at Renmin University of China; lead author of "A Survey of Large Language Models" (Zhao et al. 2023), the most widely cited LLM survey (~15,000+ citations).
+- [[renmin-university-of-china]] — Major public research university in Beijing, China; primary institutional affiliation of the Zhao et al. (2023) LLM survey authors (Gaoling School of AI and School of Information).
+- [[westlaw]] — Thomson Reuters' legal research database; cited as an example of AI-powered NLP in the legal field.
+- [[willis-towers-watson]] — Global advisory, broking, and solutions firm (WTW); hosted the Fortune 500 M&A roundtable informing Bremen (2024) and publishes M&A-focused thought leadership.
+- [[wjimt]] — World Journal of Innovation and Modern Technology (ISSN 2682-5910); publisher of Zhang et al. (2024).
+- [[world-economic-forum]] — International public-private organisation (WEF/Davos); cited as venue for Rometty/Nadella panel on AI complementing human capabilities.
+- [[quarterly-journal-of-economics]] — Economics journal that published Akerlof (1970).
+- [[xiaobing-lai]] — Researcher at the School of Accountancy, Jiangxi University of Finance and Economics, Nanchang; co-author of Zhang et al. (2025) on digital transformation and M&A.
+- [[xinhe-zhang]] — First author of Zhang et al. (2025); researcher at the School of Economics and Management, Southeast University, Nanjing.
+- [[yanli-pu]] — Second author of Zhang et al. (2024) ML M&A paper; dual affiliation NYU (Computer Science) and UIUC (Finance).
+- [[yuehua-tang]] — Finance professor at the University of Florida; co-author of Lopez-Lira et al. (2025) on the LLM memorization problem; earlier co-author of Lopez-Lira and Tang (2023) on LLMs and stock returns.
+- [[collin-burns]] — Co-author of Hendrycks et al. (2021) introducing CUAD for legal contract review.
+- [[contract-understanding-atticus-dataset]] — Expert-annotated legal contract review benchmark with 500+ contracts, 13k+ annotations, and 41 clause categories; central evidence base for measurable AI performance in legal due diligence.
+- [[dan-hendrycks]] — Lead author of Hendrycks et al. (2021) on CUAD; AI safety and evaluation researcher.
+- [[daniela-sele]] — Co-author of Sele & Chugunova (2024) on human-in-the-loop automated decision-making.
+- [[eth-zurich]] — Swiss research university; institutional affiliation of Daniela Sele in the human-in-the-loop ADM experiment.
+- [[information-retrieval-research]] — Research field concerned with finding relevant documents or passages under precision/recall constraints; method background for high-recall due diligence review.
+- [[jaap-kamps]] — Information retrieval researcher at the University of Amsterdam; co-author of Dwivedi & Kamps (2025).
+- [[london-business-school]] — Business school affiliation of Phanish Puranam on the due diligence signal-detection article.
+- [[madhukar-dwivedi]] — Lead author of Dwivedi & Kamps (2025) on in-context learning for legal due diligence.
+- [[marina-chugunova]] — Co-author of Sele & Chugunova (2024); studies human interaction with automated decision systems.
+- [[max-planck-institute-for-innovation-and-competition]] — Research institute affiliated with Marina Chugunova in Sele & Chugunova (2024).
+- [[phanish-puranam]] — Lead author of Puranam, Powell & Singh (2006), which frames DD failure as signal-detection under noisy negative information.
+- [[plos-one]] — Peer-reviewed open-access journal publishing Sele & Chugunova (2024).
+- [[sara-grobbelaar]] — Co-author of Bhagwan, Grobbelaar & Bam (2018) on due diligence in M&A.
+- [[south-african-journal-of-industrial-engineering]] — Peer-reviewed journal that published Bhagwan et al. (2018).
+- [[spencer-ball]] — Co-author of Hendrycks et al. (2021) on CUAD.
+- [[stellenbosch-university]] — South African university affiliation for Bhagwan et al. (2018).
+- [[strategic-organization]] — Management journal that published Puranam et al. (2006) on due diligence as signal detection.
+- [[uc-berkeley]] — University affiliation for Hendrycks et al. (2021).
+- [[university-of-amsterdam]] — Dutch university affiliation for Dwivedi & Kamps (2025).
+- [[university-of-pennsylvania]] — University affiliation for Benjamin Powell and Harbir Singh in Puranam et al. (2006).
+- [[v-bhagwan]] — Lead author of Bhagwan, Grobbelaar & Bam (2018) systematic review of due diligence in M&A.
+- [[william-bam]] — Co-author of Bhagwan, Grobbelaar & Bam (2018).
+- [[anya-chen]] — Co-author of Hendrycks et al. (2021) on CUAD.
+- [[benjamin-powell]] — Co-author of Puranam, Powell & Singh (2006).
+- [[harbir-singh]] — Co-author of Puranam, Powell & Singh (2006).
 
 ## Concepts
 
-_No concepts yet. Concepts are added automatically by `wiki-ingest` as
-sources are processed._
+- [[acquisition-performance]] — Financial, strategic, and organizational outcomes of an acquisition; average acquirer gains are weak or negative and depend on moderators.
+- [[adverse-selection]] — The ex ante hidden-information problem in which one party conceals unfavourable qualities before contracting; the core M&A valuation risk that due diligence and signaling are designed to resolve.
+- [[agency-theory]] — Theoretical framework explaining conflicts of interest and information asymmetry between principals and agents; the dominant theoretical lens for information asymmetry in management research (36% of 223 reviewed articles).
+- [[algorithmic-bias]] — Systematic, structurally invisible skewing of AI/ML outputs against legally protected groups arising from biased training data, flawed feature selection, or proxy discrimination; documented as a structural failure of ADM platforms in consumer finance by Johnson et al. (2019).
+- [[automation-bias]] — Human tendency to over-rely on algorithmic recommendations; central behavioural risk when AI outputs are inserted into due diligence workflows.
+- [[automated-decision-making]] — Use of algorithmic or AI-based systems to make consequential decisions with reduced human deliberation; shifts rather than eliminates discrimination according to Johnson et al. (2019).
+- [[ai-governance-in-ma]] — Frameworks, policies, and practices for deploying AI responsibly in M&A, covering confidentiality, bias, ethical standards, and regulatory compliance; grounded in the Responsible AI framework requiring fairness, explainability, and accountability.
+- [[ai-liability-ma]] — Distribution of legal responsibility across tool providers, service providers, boards, and shareholders when erroneous AI output causes harm in an M&A transaction; residual risk falls on shareholders of the acquiring company.
+- [[black-box-problem]] — The opacity of high-performing ML models (especially DNNs) whose internal workings cannot be explained or justified; the primary structural barrier to AI adoption in high-stakes financial decisions like M&A.
+- [[business-judgment-rule]] — Judicial doctrine shielding board directors from personal liability for good-faith business decisions made on an informed basis; in five jurisdictions, the standard varies from Delaware's board-friendly gross-negligence threshold to stricter German and Belgian review of AI-reliant decisions.
+- [[ai-in-ma]] — The influence of artificial intelligence across the full M&A transaction lifecycle (Thema 7, "Der Einfluss von KI auf M&A").
+- [[citation-style-harvard]] — Harvard author-date in-text citation system mandatory at the Goethe chair; includes AI-tools documentation requirements.
+- [[classical-due-diligence-process]] — The pre-AI, human-led DD process model: 16 functional disciplines, five-strand programme (verification, risk, protection, synergy, post-acquisition planning); Howson (2003) is the canonical project-management reference; Lajoux (2024) provides the legal anchoring (Securities Act 1933) and adds cybersecurity and cultural DD as standard dimensions.
+- [[conditional-random-fields]] — Discriminative sequence model (CRF) used as the primary baseline for M&A DD passage retrieval in Roegiest et al. (2018); CRF-PA achieves recall 0.847–0.851 on KIRA; requires extensive labeled data and domain-specific feature engineering.
+- [[competing-values-framework]] — Four-dimension organizational culture typology (Adhocracy, Clan, Market, Hierarchy) used by Brede et al. (2025) to operationalize cultural distance via Culture-BERT scoring of Glassdoor reviews.
+- [[corporate-culture]] — Shared firm values and behavioral norms, increasingly measurable through machine-learning analysis of organizational text.
+- [[cultural-fit-assessment]] — Evaluation of organizational cultural compatibility between acquirer and target in M&A; AI-enabled via LLMs (Culture-BERT on Glassdoor); shown by Brede et al. (2025) to predict CARs, premiums, synergies, and post-deal innovation.
+- [[deep-learning]] — ML sub-discipline using multi-layered neural networks to learn from unstructured, high-dimensional data; applicable to M&A transaction analysis.
+- [[digital-transformation]] — The enterprise-level integration of digital technologies (big data, AI, cloud computing, digital platforms); empirically shown to promote M&A by reducing information asymmetry between acquirers and targets.
+- [[due-diligence]] — Pre-acquisition investigation of a target's financials, legal status, and risks; part of the "Wertberechnung" phase; primary application domain for NLP/LLM automation per Jang & Stikkel (2024).
+- [[due-diligence-quality]] — Evaluation construct for DD output quality, covering completeness, accuracy, risk salience, decision usefulness, and actionability rather than mere document-processing volume.
+- [[due-diligence-signal-detection]] — View of DD as a noisy signal-detection process in which decision makers trade off false positives and false negatives under ambiguous negative evidence.
+- [[earnings-conference-calls]] — Quarterly investor calls with management; transcripts are the primary source for LLM-based M&A sentiment extraction.
+- [[esg-in-ma]] — The influence of Environmental, Social, and Governance factors across the M&A process (Thema 6 of the seminar).
+- [[feature-engineering]] — The process of constructing and selecting informative input variables for ML models; top M&A predictors identified as Revenue Growth Rate, Market Cap/EBITDA, Debt-to-Equity Ratio.
+- [[few-shot-learning]] — LLM prompting strategy including a small number of labeled examples in the prompt; in Dwivedi & Kamps (2025) few-shot prompts achieve acceptable recall across all 50 KIRA DD topics without any training data.
+- [[fintech-regulation]] — Evolving body of federal and state rules governing nondepository fintech firms using AI/ADM platforms; central tension is OCC federal preemption vs. state consumer-protection oversight per Johnson et al. (2019).
+- [[disparate-impact]] — Legal doctrine under ECOA and Fair Housing Act holding that facially neutral algorithmic policies are unlawful if they produce disproportionately adverse effects on protected groups; primary legal theory for challenging algorithmic bias.
+- [[generative-ai-in-ma]] — The application of generative AI and LLMs to M&A deal processes; adoption at 16% in 2024 (BCG survey) with practitioner forecast of 80% within three years.
+- [[gradient-boosting]] — Ensemble ML technique building predictive models by sequentially correcting weak learners; key algorithm family (LightGBM, XGBoost) for M&A tabular data.
+- [[hierarchical-sentence-extraction]] — Two-level NLP architecture (sentence encoder + document encoder) that handles very long legal documents; recommended approach for M&A due diligence classification per Jang & Stikkel (2024).
+- [[high-recall-information-retrieval]] — IR paradigm prioritizing completeness (recall) over precision; legal DD is an extreme instance with 0.01–0.7% relevant sentences per topic out of 15 million total in KIRA.
+- [[human-in-the-loop]] — Governance and workflow design in which humans remain formally involved in algorithmic decisions; can improve adoption but may worsen outcomes if humans rubber-stamp poor recommendations.
+- [[in-context-learning-for-due-diligence]] — Prompt-based LLM approach for legal due diligence classification/extraction without task-specific fine-tuning; especially relevant for high-recall review with expert topic descriptions.
+- [[emergent-abilities-llms]] — Capabilities absent in smaller language models that arise unpredictably once model scale crosses a threshold (in-context learning, instruction following, chain-of-thought reasoning); the defining qualitative feature distinguishing LLMs from PLMs.
+- [[information-asymmetry]] — Situation where one transaction party holds materially more information than the other; primary theoretical mechanism through which digital transformation affects M&A (Akerlof 1970, Myers-Majluf 1984); systematically reviewed by Bergh et al. (2019) across five conceptualizations.
+- [[information-impactedness]] — Williamson's (1975) TCE concept: information asymmetry raises transaction costs because achieving informational parity is prohibitively expensive; enables opportunistic exploitation and can cause market breakdown.
+- [[instruction-tuning]] — Supervised fine-tuning of pre-trained LLMs on natural-language-formatted task instances; unlocks instruction-following emergent ability and enables generalization to unseen tasks without per-task fine-tuning.
+- [[lean-methodology-in-ma]] — Application of lean manufacturing principles (Toyota Production System) to M&A processes to reduce waste and improve due diligence efficiency.
+- [[legal-contract-review]] — AI/NLP task of identifying and interpreting legally relevant contract clauses; the most mature empirical subdomain for AI-assisted due diligence.
+- [[literature-research]] — Systematic process of identifying and curating scholarly sources; quality determines paper quality.
+- [[llm-taxonomy]] — The canonical four-generation framework for language model research (Statistical LM → Neural LM → Pre-trained LM → LLM), with each generation corresponding to a progression in task-solving capacity from "specific task helper" to "general-purpose task solver."
+- [[llms-in-ma]] — Application of large language models (LLMs/ChatGPT) to M&A tasks including deal forecasting and document review.
+- [[lookahead-bias]] — Methodological error class arising when future information contaminates a model's training, inputs, or decision rule; the LLM-specific structural form (functional lookahead bias) is formalized in Lopez-Lira et al. (2025).
+- [[ml-target-selection]] — Use of supervised ML models to screen and rank acquisition targets by predicted synergy success; Zhang et al. (2024) achieve AUC-ROC 0.937 outperforming DCF and expert judgment.
+- [[ma-sentiment-analysis]] — Extraction and aggregation of managerial M&A sentiment from corporate texts using NLP or LLMs; core methodology of the MASS study.
+- [[ma-success-measurement]] — Methods and metrics for evaluating whether an M&A transaction created or destroyed value (Thema 8).
+- [[machine-learning]] — Computational methods that learn patterns from data and support prediction, classification, and measurement tasks in AI-in-M&A research.
+- [[market-for-lemons]] — Akerlof's adverse-selection mechanism under quality uncertainty; theoretical foundation for information asymmetry.
+- [[moral-hazard]] — The ex post hidden-action problem in which a party exploits an information advantage after contracting; manifests in M&A as target management shirking or withholding information post-close.
+- [[memorization-problem-llms]] — The fundamental identification failure when LLMs are used to forecast outcomes within their training period: genuine skill and memorized recall are observationally equivalent and cannot be distinguished; formalized by Lopez-Lira et al. (2025); directly challenges the validity of the Degen et al. (2024) MASS study.
+- [[merger-agreement-understanding]] — AI/NLP task of interpreting legal deal-point clauses in merger agreements and answering standardized questions about their meaning.
+- [[merger-waves]] — The empirical phenomenon that M&A activity clusters in distinct cyclical boom periods (Thema 1).
+- [[mergers-and-acquisitions]] — The field of corporate combination transactions, covering strategy, process, valuation, and integration.
+- [[post-merger-integration]] — The organizational and cultural process of combining two companies after deal close; the "Wertschaffung" phase.
+- [[pecking-order-theory]] — Corporate-finance logic that firms prefer internal funds, then debt, and issue equity last under asymmetric information.
+- [[post-hoc-explainability]] — XAI techniques (SHAP, LIME, attention, saliency maps) applied after training to explain the predictions of opaque black-box models without modifying the model itself.
+- [[pre-trained-language-models]] — Transformer-based models (BERT, GPT, LegalBERT) pre-trained on large corpora and fine-tuned for downstream tasks; central model class in Jang & Stikkel (2024) due diligence study.
+- [[prompt-engineering]] — The craft of designing natural-language instructions to steer LLM output; critical for reproducible financial sentiment scoring.
+- [[reinforcement-learning-from-human-feedback]] — Three-step LLM alignment technique (supervised fine-tuning → reward model training → RL fine-tuning via PPO) that aligns pre-trained LLMs to produce helpful, honest, and harmless outputs; the training method underlying ChatGPT and InstructGPT.
+- [[responsible-ai]] — Governance framework requiring AI deployed at scale to simultaneously meet standards for fairness, explainability, accountability, transparency, privacy, ethics, and security; XAI is its core enabling pillar.
+- [[scaling-laws]] — Empirically derived power-law relationships (KM scaling law, Chinchilla scaling law) between LLM loss and model size, data size, and training compute; provide quantitative basis for predicting performance gains from scaling and for compute-optimal training allocation.
+- [[scientific-writing]] — The systematic and traceable pursuit of knowledge through verifiable argumentation; governs all seminar paper requirements.
+- [[sentiment-analysis]] — NLP sub-discipline for computationally identifying opinions and emotions in text; parent concept of M&A sentiment analysis.
+- [[signaling-theory]] — Theory explaining how information-advantaged parties use costly, observable actions to credibly communicate unobservable quality to disadvantaged parties; third most-used theoretical lens for information asymmetry (11% of 223 reviewed articles).
+- [[snowball-method]] — Literature search technique starting from a seed source and following its references outward; must be combined with database searches.
+- [[synergy-calculation]] — Pre-deal quantification of the expected financial and operational benefits of a merger; part of the "Wertberechnung" phase.
+- [[transaction-cost-economics]] — Theory explaining governance structure choice (market/hybrid/hierarchy) by costs driven by information asymmetry and opportunism; second most-used theoretical lens (14% of 223 reviewed articles); parent framework for information impactedness.
+- [[synergy-prediction]] — ML-based forecasting of synergy magnitude and likelihood for a proposed deal; custom Synergy Prediction Score (SPS) developed by Zhang et al. (2024).
+- [[uncertainty-in-ma]] — Information, valuation, macro-policy, interim, and governance uncertainty shaping M&A deal initiation, pricing, completion, and performance.
+- [[vendor-due-diligence]] — A DD report commissioned by the seller and provided to prospective buyers; introduces an inherent framing risk that buyers must guard against through supplementary own-side review.
+- [[xai-explainable-ai]] — Field and set of techniques for making ML model decisions understandable and justifiable to specific human audiences; the dual taxonomy distinguishes transparent-by-design models from post-hoc methods (LIME, SHAP).
+- [[zero-shot-learning]] — LLM prompting strategy with no labeled examples; in Dwivedi & Kamps (2025) the Title Only and Title + Description configurations; substantially weaker than few-shot prompting for legal DD recall.

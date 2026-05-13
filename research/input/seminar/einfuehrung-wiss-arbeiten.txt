@@ -1,0 +1,1105 @@
+Wissenschaftliches Arbeiten Eine Einführung
+SS 2026
+Marco Hochhaus
+
+Lehrstuhl für BWL, insb. Strategisches Management
+
+Agenda
+
+1. Was ist „Wissenschaftliches Arbeiten“?
+2. Literaturrecherche
+3. Formales, Aufbau und Gliederung
+– Pause –
+4. Inhalt
+5. Zitieren
+6. Beurteilungskriterien
+
+Lehrstuhl für BWL, insb. Strategisches Management
+
+2
+
+Lehrstuhl für BWL, insb. Strategisches Management
+
+3
+
+Definition
+Merkmale wissenschaftlichen Arbeitens
+
+
+Wissenschaftliches Arbeiten ist die systematische und
+nachvollziehbare Erkenntnissuche.
+
+
+
+Merkmale:
+– methodisches, rationales Vorgehen
+– Ergebnisoffener Prozess
+– Zweck der Wissensmehrung
+– Orientierung am bestehenden Forschungsstand
+
+Lehrstuhl für BWL, insb. Strategisches Management
+
+4
+
+Wissenschaftliches vs.
+nicht-wissenschaftliches Arbeiten
+Nicht-wissenschaftliches Arbeiten
+ Meinungen und persönliche
+Erfahrungen
+ Unbelegte Aussagen („man
+weiß“, „es ist offensichtlich“)
+ Selektive oder unsystematische
+Quellenwahl
+
+Wissenschaftliches Arbeiten
+ Argumente auf Basis
+überprüfbarer Quellen
+ Systematisches und
+methodisches Vorgehen
+ Ergebnisoffener
+Erkenntnisprozess
+
+Ziel: Überzeugen, darstellen oder
+kommentieren
+
+Ziel: Erkenntnisgewinn und
+Nachvollziehbarkeit
+
+Lehrstuhl für BWL, insb. Strategisches Management
+
+5
+
+Beispiele
+Nicht-wissenschaftliches Arbeiten
+
+
+„Digitale Transformation ist
+wichtig für Unternehmen.“
+
+Wissenschaftliches Arbeiten
+
+
+„Die digitale Transformation wird
+in der Forschung als zentraler
+Treiber der
+Wettbewerbsfähigkeit von
+Unternehmen diskutiert (vgl.
+Autor Jahr).“
+
+ Unterschied: Behauptung vs. begründete, literaturgestützte Aussage
+
+Lehrstuhl für BWL, insb. Strategisches Management
+
+6
+
+Lehrstuhl für BWL, insb. Strategisches Management
+
+7
+
+Literaturrecherche –
+Grundsätzliches
+ Ziel:
+ Systematische Erfassung des Forschungsstands zum Thema
+ Identifikation zentraler Konzepte, Ergebnisse und Positionen
+ Vorgehen:
+ Ausgangspunkt: konkrete Fragestellung
+ Kombination aus Datenbanksuche und Schneeballsystem
+ Auswahl relevanter und qualitativ hochwertiger Quellen
+ Qualität der Recherche bestimmt die Qualität der Arbeit
+
+Lehrstuhl für BWL, insb. Strategisches Management
+
+8
+
+Literaturarten
+(nach Funktion)
+Überblicksliteratur:
+
+Vertiefende
+
+Ergänzende Literatur:
+
+Forschungsliteratur:
+•
+
+Lehrbücher
+
+•
+
+•
+
+Handwörterbücher
+
+•
+
+Überblicksartikel
+
+•
+
+Fachzeitschriften-
+
+•
+
+Fachbücher
+
+artikel
+
+•
+
+einschlägige
+
+Working Papers
+
+ Einstieg und
+
+ zentrale Grundlage
+
+Orientierung
+
+wissenschaftlicher
+
+Sammelbände
+
+ Kontext und Vertiefung
+
+Arbeiten
+
+KI ist keine wissenschaftliche Quelle im klassischen Sinne!
+Lehrstuhl für BWL, insb. Strategisches Management
+
+9
+
+KI in der Literaturrecherche
+KI-Tools können die Literaturrecherche unterstützen, ersetzen sie aber nicht.
+Sinnvoll für:
+• erste Orientierung im Themenfeld
+• Entwicklung von Suchbegriffen
+• Strukturierung möglicher Teilfragen
+• kritische Reflexion eigener Suchstrategie
+Nicht geeignet für:
+• Nachweis wissenschaftlicher Aussagen
+• ungeprüfte Übernahme von Quellenangaben
+• Ersatz von Datenbanken und Fachliteratur
+ Ergebnisse aus KI müssen kritisch überprüft werden
+ KI kann fehlerhafte oder nicht nachvollziehbare Inhalte erzeugen
+ Jede Quelle muss selbstständig überprüft werden
+(vgl. Handlungsempfehlungen der Goethe-Universität zum Einsatz generativer KI)
+
+Lehrstuhl für BWL, insb. Strategisches Management
+
+10
+
+Zugangswege
+
+ Universitätsbibliothek und Fachdatenbanken
+ Elektronische Zeitschriften
+ Ergänzend: Suchmaschinen (insbesondere Google Scholar)
+ Unterstützend: KI-Tools zur Orientierung
+ zentrale Recherche über Datenbanken, nicht über allgemeine Internetsuche
+
+Lehrstuhl für BWL, insb. Strategisches Management
+
+11
+
+Literaturrecherche –
+typischer Ablauf
+1. Einstieg über Google Scholar oder Überblicksliteratur
+2. Suche in Fachdatenbanken (z. B. JSTOR, WISO, EconLit)
+3. Auswahl relevanter Artikel (Abstract, Journal, Zitationen)
+4. Vertiefung über Schneeballsystem
+5. Aufbau einer strukturierten Literaturliste
+ Kombination verschiedener Suchwege ist entscheidend
+
+Lehrstuhl für BWL, insb. Strategisches Management
+
+12
+
+Literatursuche mit dem
+„Schneeballsystem“
+Ausgehend von einem für das Thema relevanten Buch oder Artikel werden über dessen
+Literaturverzeichnis weitere Quellen identifiziert, diese führen wieder zu weiteren Quellen usw.
+
+
+
+
+Vorteile:
+– Einfacher Einstieg
+– Relativ schnelles Auffinden der
+einschlägigen Literatur
+Nachteile:
+– Unzitierte Schriften werden
+nicht erfasst
+– Gefahr von Zitationsbias
+– Neuere Forschung wird ggf. nicht erfasst
+
+ Ergänzung durch systematische Datenbanksuche notwendig
+ besonders geeignet zur Vertiefung eines Themas
+
+Lehrstuhl für BWL, insb. Strategisches Management
+
+13
+
+Wofür nutze ich welche
+Datenbanken?
+ Fachdatenbanken (z.B. JSTOR, WISO, EconLit)
+ gezielte Suche nach wissenschaftlichen Artikeln
+ Zitationsdatenbanken (Web of Science, Scopus)
+ wichtige Arbeiten und Einfluss identifizieren
+ Google Scholar
+ schneller Einstieg und Überblick
+ Keine einzelne Datenbank ist allein ausreichend
+
+Lehrstuhl für BWL, insb. Strategisches Management
+
+14
+
+Auswahl relevanter Literatur
+
+ Passt der Artikel zur Fragestellung?
+ Veröffentlichung in wissenschaftlichem Journal?
+ Anzahl und Qualität der Zitationen
+ Aktualität der Forschung
+ Abstracts zur schnellen Vorauswahl nutzen
+ Nicht alles lesen, sondern gezielt auswählen
+
+Lehrstuhl für BWL, insb. Strategisches Management
+
+15
+
+Universitätsbibliothek Frankfurt
+
+(http://www.ub.uni-frankfurt.de)
+
+Lehrstuhl für BWL, insb. Strategisches Management
+
+16
+
+Universitätsbibliothek Frankfurt
+
+(http://www.ub.uni-frankfurt.de)
+
+Lehrstuhl für BWL, insb. Strategisches Management
+
+17
+
+Literaturrecherche - Dos & Don‘ts
+Dos
+
+
+
+
+
+
+Don‘ts
+
+Gezielte Suche in Fachdatenbanken
+Kombination verschiedener
+Suchwege
+Nutzung aktueller und relevanter
+Journalartikel
+Abstracts zur schnellen Vorauswahl
+nutzen
+relevante Abschnitte (z. B. Einleitung,
+Fazit) gezielt lesen
+
+o
+o
+o
+o
+
+nur Google oder erste Trefferseite
+nutzen
+unsystematische oder selektive
+Quellenwahl
+Fokus auf Lehrbücher statt
+Forschungsliteratur
+ungeprüfte Übernahme von Quellen
+(z. B. aus KI)
+
+ Qualität der Recherche bestimmt die Qualität der Arbeit
+
+Lehrstuhl für BWL, insb. Strategisches Management
+
+18
+
+Lehrstuhl für BWL, insb. Strategisches Management
+
+19
+
+Zweck der Gliederung
+
+
+
+Für den Autor:
+• Strukturierung der eigenen
+Gedanken
+• “Arbeitsplan” für die
+Texterstellung
+• Wichtig für die Kommunikation
+mit dem Betreuer
+
+
+
+Für den Leser:
+• Logische Grobstruktur 
+Schneller Überblick über Inhalt
+• Orientierung im Text („roter
+Faden“)
+• Der wichtigste Schlüssel zur
+Arbeit
+• Verdeutlicht dem Leser in aller
+Kürze, worum es geht
+
+ Die Gliederung ist der wichtigste Schlüssel zur Qualität der Arbeit und
+sollte vor der Texterstellung stehen!
+
+Lehrstuhl für BWL, insb. Strategisches Management
+
+20
+
+Bestandteile einer wissenschaftlichen
+Arbeit
+
+
+
+
+
+
+
+
+
+
+
+Titelblatt
+Inhaltsverzeichnis
+(Abbildungsverzeichnis)
+(Tabellenverzeichnis)
+(Abkürzungsverzeichnis)
+(Symbolverzeichnis )
+Textteil
+(Anhang)
+Literaturverzeichnis
+Eidesstattliche Erklärung
+
+ Bitte das zur Verfügung gestellte
+Template verwenden!!
+Lehrstuhl für BWL, insb. Strategisches Management
+
+21
+
+Wichtige Gliederungsregeln
+
+•
+•
+•
+•
+
+Klare, logisch aufgebaute Struktur
+(vom Allgemeinen zum Speziellen)
+Numerische und konsistente
+Gliederung (z. B. 1, 1.1, 1.1.1)
+Jeder Gliederungspunkt behandelt
+genau einen Inhalt
+Angemessener Umfang je Abschnitt:
+mindestens ½ Seite und nicht mehr
+als 2-3 Textseiten (keine Mini- oder
+Monsterkapitel
+
+Formales Gliederungsschema
+(Beispiel):
+
+ Die Gliederung muss die
+Argumentation der Arbeit widerspiegeln
+
+Lehrstuhl für BWL, insb. Strategisches Management
+
+22
+
+Formulierung von Überschriften
+
+
+Eigenschaften von Überschriften:
+• Aussagekräftig, präzise, prägnant, knapp
+• Fassen den Inhalt treffend zusammen#
+• Vermeiden allgemeine oder inhaltsleere Begriffe
+(z.B. “Allgemeine Bemerkungen” oder “Besondere Probleme”)
+• Keine ganzen Sätze / keine Satzzeichen
+(substantivierte Ausdrucksweise)
+
+
+
+Formale Regeln:
+•
+•
+•
+•
+
+Keine vollständigen Sätze
+Keine Satzzeichen
+Titel der Arbeit nicht identisch wiederholen
+Möglichst keine Formeln oder Abkürzungen
+
+Lehrstuhl für BWL, insb. Strategisches Management
+
+23
+
+Tipp zur Formulierung von
+Überschriften
+Tipp zur Formulierung von Überschriften:
+Einer (imaginären) Person den Inhalt bzw. die Intention eines Abschnittes erläutern. So erhält man
+leicht einige geeignete Formulierungen und kann aus diesen Formulierungen eine Überschrift
+zusammensetzen, die den (geplanten) Inhalt auf den Punkt bringt.
+
+Typische Begriffe:
+-
+
+Beschreibung, Betrachtung, Darstellung, Kennzeichnung
+Erklärung, Erläuterung, Verdeutlichung, Veranschaulichung
+Übersicht, Überblick
+Klassifizierung, Charakterisierung, Systematisierung, Einordnung, Abgrenzung
+Ableitung, Herleitung, Entwicklung, Ergänzung, Erweiterung, Verbindung, Verknüpfung,
+Zusammenführung, Vereinfachung, Übertragung
+Beweis, Analyse, Untersuchung, Beispiel, Identifizierung
+Diskussion, kritische Würdigung, Beurteilung, Zusammenfassung, Schlussfolgerung, Hinweis
+Bedeutung, Wirkung, Auswirkung, Effekt, Interdependenz, Ziel, Eignung
+Hinweise, Schlussfolgerungen, Perspektiven
+
+Lehrstuhl für BWL, insb. Strategisches Management
+
+24
+
+Formale Ausgestaltung
+Ränder
+
+2,5 cm
+
+4 cm
+
+DIN A4
+
+
+
+3 cm
+
+Ränder gelten für:
+– Verzeichnisse
+– Text
+– Fußnoten
+– Anhang
+
+2 cm
+
+Lehrstuhl für BWL, insb. Strategisches Management
+
+25
+
+Formale Ausgestaltung
+Fußnoten
+
+
+Hinweise zu Fußnoten:
+– Punkt am Ende einer Fußnote
+– Einrücken
+– Kein durchgezogener Strich über Fußnoten
+– Keine Fußnote an Überschriften
+– Mit Fußnoten sparsam umgehen!
+
+Lehrstuhl für BWL, insb. Strategisches Management
+
+26
+
+Formale Ausgestaltung
+Beispiel
+
+4 cm
+
+Lehrstuhl für BWL, insb. Strategisches Management
+
+27
+
+Formale Ausgestaltung
+Zeilenabstand
+
+
+1,5-zeilig im Text
+
+
+
+Einzeilig in den Fußnoten
+
+Lehrstuhl für BWL, insb. Strategisches Management
+
+28
+
+Formale Ausgestaltung
+Umfang und Schrift
+
+
+Umfang der Arbeit: 25-30 Textseiten (inkl. Abbildungen)
+
+
+
+Schriftart:
+– Arial oder Times New Roman
+
+
+
+Schriftgröße:
+– 12 pt im Text
+– 10 pt in den Fußnoten
+
+
+
+Schriftsatz:
+– Blocksatz
+(mit automatischer Silbentrennung)
+
+Lehrstuhl für BWL, insb. Strategisches Management
+
+29
+
+Formale Ausgestaltung
+Abbildungen und Tabellen
+
+
+Zweck: Ergänzung des Textes/Verdeutlichung von Inhalten
+– Einbindung in den Text (Querverweise)
+– Abbildungen und Tabellen gehören in der Regel in den
+Haupttext (und nicht in den Anhang)
+
+
+
+Beschriftung von Abbildungen/Tabellen:
+– Abbildungen durchnummerieren (Abb.1, Abb. 2, …)
+– Aussagefähiger Titel
+– Quelle der Abbildung in Fußnote angeben
+
+ Tabellen- und Abbildungsverzeichnisse nicht vergessen!
+
+Lehrstuhl für BWL, insb. Strategisches Management
+
+30
+
+Formale Ausgestaltung
+Tabellenverzeichnis (Beispiel)
+
+Lehrstuhl für BWL, insb. Strategisches Management
+
+31
+
+Lehrstuhl für BWL, insb. Strategisches Management
+
+32
+
+Literaturrecherche –
+typischer Ablauf
+1. Einstieg über Google Scholar oder Überblicksliteratur
+2. Suche in Fachdatenbanken (z. B. JSTOR, WISO, EconLit)
+3. Auswahl relevanter Artikel (Abstract, Journal, Zitationen)
+4. Vertiefung über Schneeballsystem
+5. Aufbau einer strukturierten Literaturliste
+ Kombination verschiedener Suchwege ist entscheidend
+
+Lehrstuhl für BWL, insb. Strategisches Management
+
+33
+
+Inhalt der Arbeit
+Aufbau einer wissenschaftlichen Arbeit
+Grundaufbau:
+
+Schreibreihenfolge:
+
+Einleitung
+
+3
+
+Grundlagenteil
+
+1
+
+Hauptteil
+
+2
+
+Schlussteil
+
+4
+
+Literaturverzeichnis
+Lehrstuhl für BWL, insb. Strategisches Management
+
+34
+
+Inhalt der Arbeit
+Schreibprozess (typisches Vorgehen)
+
+Gliederung
+entwickeln
+
+Grundlagenteil
+erarbeiten
+
+Hauptteil
+ausarbeiten
+
+Einleitung und
+Schluss
+formulieren
+
+Überarbeitung
+und Feinschliff
+
+ Schreiben ist ein iterativer Prozess
+
+35
+
+Inhalt der Arbeit
+Einleitung
+Bestandteile:
+• Hinführung zum Thema (ohne allgemeine Floskeln)
+• Interesse wecken
+• Darstellung des Problems
+• Relevanz der Fragestellung
+• Ziel der Arbeit
+• Gang der Untersuchung
+ Typische Fehler in Einleitungen:
+• Definitionen, Annahmen
+• Tabellen, Abbildungen, Formeln
+• Inhalte, auf die im Weiteren aufgebaut wird
+• zu detaillierte Inhalte oder Ergebnisse vorwegnehmen
+• fehlende klare Fragestellung
+
+ Die Einleitung beantwortet: Worum geht es und warum ist das wichtig?
+Lehrstuhl für BWL, insb. Strategisches Management
+
+36
+
+Inhalt der Arbeit
+Grundlagenteil
+Bestandteile:
+• Einordnung der Thematik in den fachlichen Kontext
+• Überblick über den Stand der Forschung
+• Definition zentraler Begriffe
+• Darstellung relevanter theoretischer Ansätze
+ Typische Fehler:
+• reine Zusammenfassung ohne Bezug zur Fragestellung
+• fehlende Struktur oder roter Faden
+• unklare oder inkonsistente Begriffsverwendung
+• zu breite oder zu oberflächliche Darstellung
+ Beantwortet die Frage: Auf welcher theoretischen und konzeptionellen
+Grundlage basiert die Arbeit?
+Lehrstuhl für BWL, insb. Strategisches Management
+
+37
+
+Inhalt der Arbeit
+Hauptteil
+Bestandteile:
+• strukturierte Analyse des Themas
+• systematische Argumentation
+• kritische Auseinandersetzung mit der Literatur
+• Diskussion und Einordnung des Vorgehens und der Ergebnisse
+ Typische Fehler:
+• reine Beschreibung statt Analyse
+• fehlende logische Struktur („kein roter Faden“)
+• unverbundene Einzelargumente
+• fehlende kritische Würdigung
+ Beantwortet die Frage: Wie lässt sich die Fragestellung auf Basis der
+Analyse beantworten?
+Lehrstuhl für BWL, insb. Strategisches Management
+
+38
+
+Inhalt der Arbeit
+Schlussteil
+Bestandteile:
+• Zusammenfassung der zentralen Ergebnisse
+• Rückbezug auf die Fragestellung der Einleitung (Rahmen bilden)
+• Bewertung der Ergebnisse
+• ggf. Ausblick auf weiterführende Fragen
+• Letzter Satz / Absatz = Kernaussage der Arbeit (wichtig für den Gesamteindruck)
+ Typische Fehler:
+• neue Inhalte oder Argumente einführen (Ausblick jedoch erlaubt)
+• reine Wiederholung ohne Einordnung
+• fehlender Bezug zur Fragestellung
+• unklare oder schwache Schlussaussage
+ Beantwortet die Frage: Was sind die zentralen Ergebnisse und was bedeuten sie?
+
+Lehrstuhl für BWL, insb. Strategisches Management
+
+39
+
+Inhalt der Arbeit
+wichtige Strukturierungshilfen
+Leseverständnis unterstützen und Leser leiten: „roter Faden“
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+Begriffe bei Erstnennung (kurz) erläutern
+Schrittweise vorgehen
+Auf innere Logik achten
+(in Sätzen, Absätzen, Argumentationsketten)
+Eigenes Vorgehen begründen
+Ggf. Überleitungen
+(zwischen Kapiteln, Absätzen, Gedanken, …)
+Querbezüge innerhalb der Arbeit und zur Literatur aufzeigen
+Folgerungen und Bezüge verdeutlichen
+Sinnvolle Absätze bilden
+Folgerungen und Zusammenhänge klar herausarbeiten
+
+Lehrstuhl für BWL, insb. Strategisches Management
+
+40
+
+Lehrstuhl für BWL, insb. Strategisches Management
+
+41
+
+Warum zitieren?
+
+ Nachvollziehbarkeit von getroffenen Aussagen
+ Einordnung in den Forschungsstand
+ Abgrenzung eigener und fremder Gedanken
+
+ Zitieren ist Voraussetzung wissenschaftlichen Arbeitens
+
+Lehrstuhl für BWL, insb. Strategisches Management
+
+42
+
+Zitieren in wissenschaftlichen
+Arbeiten
+
+
+Zitierpflicht und Zitierfähigkeit
+–
+–
+–
+–
+–
+–
+
+Jede übernommene Aussage muss belegt werden
+Gilt für wörtliche und sinngemäße Übernahmen
+Ein Verstoß gegen die Zitierpflicht, also das Plagiat, führt unweigerlich zu
+einer Bewertung der Arbeit mit der Note „mangelhaft“.
+Zitierfähig: öffentlich zugängliche und nachprüfbare Quellen
+Keine Vorlesungsskripte!
+Unveröffentlichte, nicht allgemein zugängliche Quellen (z.B. statistisches
+Material eines Unternehmens, Interviews, …) sind als Anlage (zumindest
+auszugsweise) zusammen mit der Arbeit einzureichen und sind dann
+ebenfalls zitierfähig.
+
+Lehrstuhl für BWL, insb. Strategisches Management
+
+43
+
+Zitatformen
+Direkt vs. indirekt
+
+
+Direktes (wörtliches) Zitat:
+•
+Wörtliche Übernahme von Aussagen Dritter
+•
+Kennzeichnung durch Anführungszeichen
+Auslassungen oder Ergänzungen sind kenntlich zu machen
+•
+Müssen belegt werden (Kurzbeleg im Text)
+•
+
+
+
+Indirektes (sinngemäßes) Zitat:
+Fremde Gedanken oder Ausführungen werden übernommen
+•
+Jede Form einer textlichen Anlehnung / sinngemäßen Wiedergabe
+•
+•
+Müssen belegt werden (Kurzbeleg im Text, wobei ein „vgl.“ vorangestellt wird)
+
+
+
+Sekundärzitate nur im Ausnahmefall (Kurzbeleg mit „zit. nach“)
+
+Lehrstuhl für BWL, insb. Strategisches Management
+
+44
+
+Zitationsform am Lehrstuhl:
+“Harvard-Style”
+
+
+Quellenangaben (Kurzbelege) werden in Klammern direkt in den Text
+geschrieben
+•
+
+
+
+Form: (Autor Jahr, Seitenangabe)
+
+Vollständige Literaturangabe im Literaturverzeichnis
+
+Lehrstuhl für BWL, insb. Strategisches Management
+
+45
+
+Zitate im Harvard-Style
+Beispiele
+Längeres wörtliches
+Zitat (abgesetzt)
+
+Wörtliches Zitat
+(im Text)
+Indirektes Zitat
+
+Indirektes Zitat
+
+Lehrstuhl für BWL, insb. Strategisches Management
+
+46
+
+Quellenangaben im
+Literaturverzeichnis (I)
+ Quellenangaben bei Büchern:
+ Format:
+
+Familienname, Vorname des (der) Verfasser(s) (Jahr):
+„Sachtitel, (gegebenenfalls Untertitel)“, [Bandangabe],
+[Auflage], [Reihentitel], Ort: Verlag.
+
+ Beispiele:
+
+• Ein Verfasser:
+Rieger, Wilhelm (1959): „Einführung in die Privatwirtschaftslehre“, 2. Aufl.,
+Erlangen: Palm & Enke, S. 209-212.
+•Zwei und mehr Verfasser:
+Szyperski, Norbert / Winand, Udo (1974): „Entscheidungstheorie. Eine
+Einführung unter besonderer Berücksichtigung spieltheoretischer Konzepte“,
+Stuttgart: Poeschel.
+•mit Auflagenbezeichnung:
+Schönfeld, Hans-Martin (1969): „Grundlagen des Rechnungswesens“, 2., neu
+bearbeitete und erweiterte Auflage. Stuttgart: Poeschel.
+
+Lehrstuhl für BWL, insb. Strategisches Management
+
+47
+
+Quellenangaben im
+Literaturverzeichnis (II)
+ Quellenangaben bei Beiträgen in Sammelwerken :
+ Format: Familienname, Vorname des (der) Verfasser(s)
+(Jahr): „Titel des Beitrags, (ggf. Untertitel)“, in:
+Familienname, Vorname des Herausgebers (Hrsg.):
+„Titel Sammelwerk (ggf. Untertitel)“, [Bandangabe],
+[Auflage], [Reihentitel], Ort: Verlag, Seitenangabe.
+ Beispiele:
+• Meffert, Heribert (1974): „Absatztheorie, systemorientierte“, in: Tietz, Bruno
+(Hrsg.): „Handwörterbuch der Absatzwirtschaft“, Stuttgart: Poeschel, S. 138-158.
+•Beispiel mit Bandangabe:
+Wöhe, Günther (1974): „Betriebswirtschaftslehre. Entwicklungstendenzen
+der Gegenwart“, in: Grochla, Erwin/Wittmann, Waldemar (Hrsg.):
+„Handwörterbuch der Betriebswirtschaft“, 1. Teilband, Stuttgart: Poeschel,
+S. 710-747.
+Lehrstuhl für BWL, insb. Strategisches Management
+
+48
+
+Quellenangaben im
+Literaturverzeichnis (III)
+ Quellenangaben bei Zeitschriftenaufsätzen:
+ Format:
+
+Familienname, Vorname des (der) Verfasser(s) (Jahr):
+„Titel des Aufsatzes, (ggf. Untertitel)“, in:
+Name der
+Zeitschrift, Jg. (Jahrgang/Band) (Jahr), Heft-Nr.,
+Seitenangabe.
+
+ Beispiel:
+• Kotler, Philip (1979): „Marketing für den öffentlichen Bereich. Ansatzpunkte,
+
+Instrumente und Anwendungsbeispiele“, in: Die Betriebswirtschaft, 39. Jg. (1979),
+Heft 3, S. 421-430.
+
+Lehrstuhl für BWL, insb. Strategisches Management
+
+49
+
+Quellenangaben im
+Literaturverzeichnis (IV)
+ Quellenangaben bei Zitaten aus dem Internet :
+ Format:
+
+Familienname, Vorname des (der) Verfasser(s) (Datum
+der Quelle): „Titel des Beitrags, (ggf. Untertitel)“, in: URL,
+(gesichtet am: Datum der Sichtung).
+
+ Beispiel:
+• O`Connor, Eiken / Karl, Jonathan (23.10.1997): “Whitehouse conference to
+
+spotlight child care”, in: http://www.cnn.com/us/9710/23/child.care/index.html,
+(gesichtet am 10.10.1999).
+
+Lehrstuhl für BWL, insb. Strategisches Management
+
+50
+
+KI und Zitieren
+ KI-generierte Inhalte sind keine wissenschaftlichen Quellen
+ Verwendung von KI muss transparent gemacht werden
+ KI-gestützte Textpassagen, Visualisierungen, Datengenerierungen, Daten-transformationen
+und sonstige inhaltlich wesentliche Beiträge, sind im Text oder in Fußnoten zu kennzeichnen
+ Zudem ist anzugeben, wenn KI-gestützte Programme zur Ideenfindung verwendet wurden
+ Sekundärquellen prüfen! KI erfindet oft Literaturangaben
+
+Lehrstuhl für BWL, insb. Strategisches Management
+
+51
+
+KI-Verzeichnis
+ zusätzlich zum Literaturverzeichnis ist ein Verzeichnis der verwendeten KI zu erstellen:
+KI-basiertes
+Hilfsmittel; Version
+
+Einsatzform
+
+Betroffene Teile der
+Arbeit
+
+ChatGPT (OpenAI)
+Version 3.5
+
+Erstellung von
+Textvorschlägen,
+im Text bzw. in
+Fußnoten
+gekennzeichnet
+
+Kapitel 1, S. 3,
+Abschnitt 2
+
+Bemerkungen
+
+…
+
+Lehrstuhl für BWL, insb. Strategisches Management
+
+52
+
+KI und Zitieren
+ Programme, welche ohne Erwähnung im Verzeichnis verwendet werden
+dürfen
+i.
+Microsoft Office, LaTeX, OpenOffice, iWork
+ii. Google Scholar
+iii. Datenbanken der Universitätsbibliothek
+iv. Literaturverwaltungsprogramme (Zotero, Endnote, Mendeley, Citavi,
+etc.)
+v. Rechtschreib- oder Grammatikkorrekturhilfen
+vi. Online-Wörterbücher
+vii. R, Python, SPSS, etc.
+
+Lehrstuhl für BWL, insb. Strategisches Management
+
+53
+
+Typische Fehler beim Zitieren
+
+ fehlende Quellenangaben
+ zu wenige oder ungeeignete Quellen
+ falsche oder ungenaue Paraphrasen
+ Aneinanderreihung von Zitaten ohne eigene Argumentation
+ inkonsistente oder fehlerhafte Anwendung des Zitierstils
+
+ Ziel ist Argumentation mit Literatur, nicht Zitieren an sich
+
+Lehrstuhl für BWL, insb. Strategisches Management
+
+54
+
+Lehrstuhl für BWL, insb. Strategisches Management
+
+55
+
+Beurteilungskriterien (I)
+
+
+
+Behandlung der Fragestellung:
+– Werden themenfremde oder unnötig breite Aspekte vermieden?
+– Werden alle relevanten Teile der Fragestellung behandelt?
+– Werden konsistente Argumentations-/Beleg-/Beweisketten entwickelt?
+– Sind diese Ketten logisch, lückenlos und in sich widerspruchsfrei?
+
+ Ergebnisse:
+– Sind die Ergebnisse klar formuliert?
+– Sind die Ergebnisse in sich widerspruchsfrei?
+– Ergeben sie sich nachvollziehbar aus der Argumentation?
+ Ergebnisse dürfen nicht „wie ein Kaninchen aus dem Zauberhut“ erscheinen
+
+Lehrstuhl für BWL, insb. Strategisches Management
+
+56
+
+Beurteilungskriterien (II)
+
+ Definitionen, Prämissen:
+– Werden zentrale Begriffe klar definiert?
+– Werden sie konsistent verwendet?
+– Werden Annahmen und Prämissen transparent gemacht?
+ Eigenständigkeit:
+– Zeigt die Arbeit Eigenüberlegungen in Form eigener Ansätze oder die
+Umsetzung eigener Ideen?
+– Werden Literaturlücken erkannt und zu schließen versucht?
+– Werden Widersprüche und Fragwürdigkeiten in der Literatur
+herausgearbeitet, kommentiert und aufzulösen versucht?
+ Ziel ist eine eigenständige und reflektierte Auseinandersetzung mit dem
+Thema
+Lehrstuhl für BWL, insb. Strategisches Management
+
+57
+
+Beurteilungskriterien (III)
+
+ Sprache und Stil:
+– klare, präzise und verständliche Formulierungen
+– sachlicher und wissenschaftlicher Sprachstil
+– logisch aufgebaute und aussagekräftige Sätze
+ Struktur und Darstellung:
+ nachvollziehbare Gliederung
+ konsistente und aussagekräftige Überschriften
+ sinnvoll gesetzte Absätze
+
+
+Formale Anforderungen:
+ korrekte und einheitliche Zitierweise
+ Einhaltung formaler Vorgaben
+ sorgfältige und fehlerfreie Darstellung
+
+Lehrstuhl für BWL, insb. Strategisches Management
+
+58
+
+Was macht eine gute wissenschaftliche Arbeit aus?
+ eine klare Fragestellung
+ eine logische Argumentation
+ fundierte Literaturarbeit
+ eine saubere und verständliche Darstellung
+
+ Qualität entsteht durch Klarheit und Struktur, nicht durch Umfang
+
+Lehrstuhl für BWL, insb.
+Strategisches Management
+
+59
+
+
